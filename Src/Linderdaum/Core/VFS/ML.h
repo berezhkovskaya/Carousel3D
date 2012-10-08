@@ -1,0 +1,400 @@
+/**
+ * \file ML.h
+ * \brief Markup language parsing library. ML node, ML node builder, String tokenizer
+ * \version 0.9.1
+ * \date 01/03/2011
+ * \author Viktor N. Latypov, 2003-2007, 2007-2011
+ * \author viktor@linderdaum.com http://www.linderdaum.com
+ */
+
+/// MLLib is used in LinderdaumEngine under exclusive license
+
+#ifndef __ml__nodes__h__included__
+#define __ml__nodes__h__included__
+
+#include <stddef.h>
+
+/// Define for compilation without LString (use without the rest of the Engine)
+#undef __NO_L_STRING
+
+class mlNode;
+class strParser;
+
+#include <vector>
+
+#define T_DELIMITER     1
+#define T_NUMBER        2
+#define T_STRING        3
+#define T_MULTI_STRING  4
+#define T_QUOTED_STRING 5
+#define T_EOLN          6
+#define T_EOF           7
+#define T_ASM_COMMENT   8
+#define T_CPP_COMMENT   9
+#define T_MULTI_COMMENT 10
+#define T_MACRO         11
+
+#ifdef __NO_L_STRING
+
+#include <string>
+typedef std::string LString;
+
+namespace LStr
+{
+
+	inline bool IsMultiline( const LString& Str )
+	{
+		for ( const char* Ch = Str.c_str(); *Ch; Ch++ )
+		{
+			if ( *Ch == 13 || *Ch == 10 )
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+}
+
+#else  // !__NO_LSTRING
+
+#include "LString.h"
+
+#endif
+
+/**
+   \brief Single node of ML file
+
+   ML node hierarchies can be created from XML files or curly-bracket config files
+
+   .ASE and .MDx models can be processed by the mlParser too
+
+   1. General syntax for the ML file
+
+   a) Sections and params
+
+   SectionName(SectionParam)
+   {
+      ParamName ParamVal1 ParamVal2 ...
+
+      SubsectionName1()
+      {
+         ...
+      }
+
+      SubsectionName2(SubsectionParam)
+      {
+      }
+   }
+
+   b) Limited "escape-sequences" are supported:
+
+      ## ... ##
+
+   construction is treated as a single string, no matter how many lines it contains between two sharps.
+
+   c) Comments can be in "assembler style"
+
+      ; Ignored comment line
+
+   and in C/C++ style, starting with doyble slash of / *
+
+
+   2. XML files correspond to ML syntax in the following way:
+
+   <SectionName param="Parameter">
+
+      <ParameterName value="Value string">
+      ...
+
+      <SubsectionName param="Subparam">
+         ...
+      </SubsectionName>
+
+   </SectionName>
+
+   3. Special ASE/MD5 compatibility allows using multiline
+   and the following constructions:
+
+   *NODE_TM {
+      ...
+      *TM_ROT1 0 1 0
+      ...
+   }
+
+*/
+class mlNode
+{
+public:
+	mlNode() : children(), isQuotedParam( false ), isSection( false ) {}
+
+	mlNode( const LString& name, const LString& value ) : FValue( value ), FID( name ), isSection( false ), children() {}
+
+	virtual ~mlNode()
+	{
+		for ( std::vector<mlNode*>::iterator o = children.begin() ; o != children.end() ; ++o )
+		{
+			delete ( *o );
+		}
+
+		children.clear();
+	}
+
+#pragma region ID and Value access
+
+	inline void    setID( const LString& _ID ) { FID = _ID; }
+
+	inline LString getID() const { return FID; }
+
+	inline void    setValue( const LString& val ) { FValue = val; }
+
+	inline LString getValue() const { return FValue; }
+
+#pragma endregion
+
+#pragma region Actual node content
+
+public:
+
+	/// List of node children
+	std::vector<mlNode*> children;
+
+	/// Is it a section
+	bool isSection;
+
+	/// Is value a quoted string
+	bool isQuotedParam;
+
+private:
+
+	/// Symbolic node ID
+	LString FID;
+
+	/// Value contained in this node
+	LString FValue;
+
+#pragma endregion
+};
+
+inline void FindAllNodesWithName( mlNode* Root, const LString& Name, std::vector<mlNode*>& SubNodes )
+{
+	for ( size_t i = 0 ; i < Root->children.size() ; i++ )
+	{
+		if ( Root->children[i]->getID() == Name )
+		{
+			SubNodes.push_back( Root->children[i] );
+		}
+	}
+}
+
+inline mlNode* FindSubNode( mlNode* N, const LString& SubName )
+{
+	for ( size_t i = 0 ; i < N->children.size() ; i++ )
+		if ( N->children[i]->getID() == SubName )
+		{
+			return N->children[i];
+		}
+
+	return NULL;
+}
+
+#ifndef __NO_L_STRING
+
+inline void FindAllNodesWithNameStartingFrom( const std::vector<LString>& Prefixes, mlNode* Root, std::vector<mlNode*>& SubNodes )
+{
+	for ( size_t i = 0 ; i < Root->children.size() ; i++ )
+		for ( size_t j = 0 ; j < Prefixes.size() ; j++ )
+			if ( LStr::StartsWith( Root->children[i]->getID(), Prefixes[j] ) )
+			{
+				SubNodes.push_back( Root->children[i] );
+				break;
+			}
+}
+
+#endif
+
+
+inline bool isDelimiter( char c )
+{
+	// unused ones are "-", "+", "*", ",", ":"
+	char delimiters[] = { '{', '}', '(', ')', '=', '/', '&', '\"', '%', '\\', '#', '^', ';' };
+
+	for ( int i = 0 ; i < 13 ; i++ )
+		if ( c == delimiters[i] )
+		{
+			return true;
+		}
+
+	return false;
+}
+
+/**
+   \brief Lightweight textbuffer tokenizer
+
+   Call setBuffer() and use nextToken() to iterate tokens while ignoring comments and empty spaces
+
+   Can be used with C-like curly bracket syntax or some simple
+   structured file formats like ASE/MD5 or many of the Unix-style configs.
+
+   This can be autogenerated from some set of regexps, but this is not the point. It just works.
+*/
+class strParser
+{
+public:
+	int tokenType;
+	LString token;
+public:
+	strParser() : bufLen( 0 ), buffer( 0 ), tokenType( 0 ), token( "" ) { reset(); }
+	~strParser() {}
+
+	/// Reset parsing state
+	inline void reset() { token.clear(); pos = curPos = curLine = 0; states.clear(); }
+
+	/// Read next token in the buffer
+	void nextToken();
+
+	/// Assign new buffer for parsing
+	void setBuffer( const char* _buf, size_t _blen )
+	{
+		bufLen = _blen;
+		buffer = _buf;
+
+		reset();
+	}
+
+	inline size_t getLine() const { return curLine; }
+	inline size_t getPos()  const { return curPos;  }
+
+#pragma region Token type checkers
+
+	inline bool isComment()      const { return ( tokenType == T_MULTI_COMMENT || tokenType == T_ASM_COMMENT || tokenType == T_CPP_COMMENT );}
+	inline bool isString()       const { return ( tokenType == T_STRING || ( tokenType == T_MULTI_STRING ) || tokenType == T_QUOTED_STRING );}
+	inline bool isEOLN()         const { return ( buffer[pos] == 13 ) || ( buffer[pos] == 10 ); }
+	inline bool isEOF()          const { return ( buffer[pos] == 26 ); }
+	inline bool isSpace()        const { return ( buffer[pos] == ' ' ) || ( buffer[pos] == 9 ); }
+
+	inline bool isMultilineStr() const { return LStr::IsMultiline( token ); }
+
+	inline bool isEndOfStream()  const { return ( pos >= bufLen ); }
+
+#pragma endregion
+
+#pragma region Stack for lookahead parsing
+
+	/// Store current position in a stack
+	inline void pushPosition()
+	{
+		parserState st;
+
+		st.pos      = pos;
+		st.line_idx = curLine;
+		st.pos_idx  = curPos;
+
+		states.push_back( st );
+	}
+
+	/// Forget last saved position and continue parsing
+	inline void popPosition() { states.pop_back(); }
+
+	/// Restore last saved position
+	inline void restorePosition()
+	{
+		parserState state = states.back();
+
+		pos     = state.pos;
+		curLine = state.line_idx;
+		curPos  = state.pos_idx;
+
+		states.pop_back();
+	}
+
+private:
+
+	/// Saved parser state
+	struct parserState
+	{
+		size_t pos;
+		size_t line_idx, pos_idx;
+	};
+
+	/// Stack of parser states
+	std::vector<parserState> states;
+
+#pragma endregion
+
+private:
+	size_t curLine, curPos;
+
+	size_t bufLen, pos;
+
+	/// Actual processed text container
+	const char* buffer;
+
+	/// Stored string with everything from current position to the found pattern
+	LString skippedString;
+
+	/// Skip everything until the pattern. Used in comments parsing
+	bool skipUntil( const LString& pattern );
+
+	/// Skip the string till EOLN
+	void skipString();
+
+	/// Get quoted string
+	void getString();
+
+	/// Advance in stream and get next char
+	bool getNextChar( LString& str );
+
+	/// Lookahead for len chars from start
+	LString getSubString( size_t start, size_t len );
+
+	inline bool normalChar( char c ) const { return !( isDelimiter( c ) || isEOF() || isEOLN() || isSpace() ); }
+	inline bool isNumber( char c )   const { return ( ( c >= '0' ) && ( c <= '9' ) ); }
+};
+
+#define ML_ERR_UNEXPECTED_EOF         1
+#define ML_ERR_UNEXPECTED_EOLN        2
+#define ML_ERR_NO_CLOSING_BRACKET     3
+#define ML_ERR_NO_EMBEDDED_COMMENTS   4
+#define ML_ERR_SINGLE_STRING_EXPECTED 5
+#define ML_ERR_EXPECTED_SUBSECTION    6
+
+class mlTreeBuilder
+{
+public:
+	mlTreeBuilder() : ASEMode( false ), lastError( 0 ), lastPos( 0 ), lastLine( 0 ) {}
+
+	mlNode* build( const char* buffer, size_t bufLen );
+public:
+	/// Last error code
+	size_t lastError;
+
+	/// Position and line of last error
+	size_t lastPos, lastLine;
+
+	/**
+	   \brief ASE/MD5 "freeform" parsing mode
+
+	   1. Allows multiline and quoted strings as parameter names
+	   2. Allows usage of delimiters
+	   3. Allows "<SectionName> {" syntax in addition to "<SectionName>() {"
+	*/
+	bool ASEMode;
+private:
+	bool canReadUntilOpeningBracket( LString& val );
+
+	mlNode* removeRedundant( mlNode* res );
+
+	// internal state
+	mlNode* readSection();
+
+	strParser parser;
+};
+
+#endif
+
+/*
+ * 04/09/2010
+     Fixes for x64 target
+*/

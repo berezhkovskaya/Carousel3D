@@ -1,0 +1,6 @@
+
+LOCAL_CFLAGS   := -mfpu=vfp -mfloat-abi=softfp -O3 -Werror -DANDROID -DDISABLE_IMPORTGL -D_DISABLE_TUNNELLERS_ -D_DISABLE_METHODS_ -DDISABLE_GUARD_UNGUARD_MECHANISM -isystem $(SYSROOT)/usr/include/ 
+
+LOCAL_LDLIBS     := -llog -lGLESv2 -Wl,-s
+
+include $(BUILD_STATIC_LIBRARY)

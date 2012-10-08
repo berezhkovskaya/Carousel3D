@@ -1,0 +1,1800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Src">
+			<UniqueIdentifier>{21f5342b-42bb-4ec9-8e4e-5fc73ff9463d}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src">
+			<UniqueIdentifier>{5b5f6f6a-0f65-4abe-9e0d-3d492f2d5772}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\ExtLibs">
+			<UniqueIdentifier>{385e9599-590a-4ccd-8fd1-b9efe5b04e44}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\ExtLibs\CL">
+			<UniqueIdentifier>{27ab9e0a-13e1-45a4-97f1-919fe0f411ca}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\ExtLibs\DInput">
+			<UniqueIdentifier>{dad7432c-c5b8-4665-a1e9-02284a485051}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\ExtLibs\FMOD">
+			<UniqueIdentifier>{be85b66d-d0d5-47d4-ad82-5eeaa5a49e35}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\ExtLibs\GL">
+			<UniqueIdentifier>{d3e34a0d-a41f-4de2-bb0b-87e23f21edcd}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\ExtLibs\ModPlug">
+			<UniqueIdentifier>{a722d047-6e7f-4da6-8364-d826d379fa78}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\ExtLibs\OpenAL">
+			<UniqueIdentifier>{3f1e2c69-ad50-445a-a94a-90d0fa2ef36c}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\ExtLibs\RSC">
+			<UniqueIdentifier>{1e1b67d5-b380-487b-9e01-e2e81cfe8db5}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\ExtLibs\Vorbis">
+			<UniqueIdentifier>{b079026f-4027-4367-b82e-465ee7ab21b7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\ExtLibs\Vorbis\ogg">
+			<UniqueIdentifier>{24c9743a-8722-4468-bb6d-0bd1bc93fe17}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Generated">
+			<UniqueIdentifier>{60d51dc0-9db2-4592-b854-68009dc36d3d}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Generated\Exports">
+			<UniqueIdentifier>{46cc947a-1708-4a9a-b4b1-0f5bd23f6005}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Generated\Globals">
+			<UniqueIdentifier>{34057753-22b8-4746-b217-9aa7c1787573}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Generated\LAL">
+			<UniqueIdentifier>{6cd6272d-241f-46ca-b6a8-2b6eca89972a}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Generated\LCL">
+			<UniqueIdentifier>{4e27bc83-c943-4a50-a721-eae30a255037}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Generated\LGL">
+			<UniqueIdentifier>{3772a9ab-d042-475d-a81c-439850f44d5b}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Generated\Serialization">
+			<UniqueIdentifier>{459d453b-3628-4f94-8c90-fea1261d4ba1}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Generated\VM">
+			<UniqueIdentifier>{9756ac6a-d53a-4977-8f63-2add26514317}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum">
+			<UniqueIdentifier>{ae08eea7-6993-4b6a-b673-44ea65f544fc}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Audio">
+			<UniqueIdentifier>{5aac1eea-886b-4238-b78c-fbfd2b69c13b}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Core">
+			<UniqueIdentifier>{c41e8556-af58-4868-8e20-8ab0880ef13a}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Core\RTTI">
+			<UniqueIdentifier>{92c0f4b7-b108-4938-9017-208c552717d2}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Core\VFS">
+			<UniqueIdentifier>{632f2c9f-7ca8-407f-87d1-36fb53aeb6a8}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Geometry">
+			<UniqueIdentifier>{930a03a2-2b8b-469a-9e5f-6cd8912938a1}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\GUI">
+			<UniqueIdentifier>{10475042-855d-4ead-9855-1c2a806d9fae}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\GUI\ComCtl">
+			<UniqueIdentifier>{ceadc9ed-0f61-426a-8c83-fb86ee79b753}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\GUI\Transitions">
+			<UniqueIdentifier>{810a4bb6-a8c3-4ac5-9eee-51b33aaca0e7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Images">
+			<UniqueIdentifier>{7cfab2ae-71b9-474a-8c26-69ff2ceef13e}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Input">
+			<UniqueIdentifier>{dfd0f0a3-1b37-4a04-9b34-deb23e1a5097}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Math">
+			<UniqueIdentifier>{e6dad524-60c8-447c-bbaa-c1022760e0a0}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Network">
+			<UniqueIdentifier>{7891e0b6-27f1-4dc6-ad43-bf35f4d74c98}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Physics">
+			<UniqueIdentifier>{8ff15fc0-bc93-4987-8be0-1cc2e96c5f4b}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Renderer">
+			<UniqueIdentifier>{eb13413d-cb9d-459c-aa47-d713112a872e}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Renderer\CL">
+			<UniqueIdentifier>{a2369366-73d1-4346-a537-a443bb9dd95e}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Renderer\DX11">
+			<UniqueIdentifier>{f2a0b46f-6ecb-4488-b8f0-fc26533682b9}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Renderer\GL">
+			<UniqueIdentifier>{ccc412f5-76ac-4f24-8a96-d06c8994cbfd}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Renderer\Soft">
+			<UniqueIdentifier>{5c129abf-f5bc-4366-9178-683344f5f73e}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Resources">
+			<UniqueIdentifier>{7b7b2680-2c24-41cf-b0aa-119a123d4d2d}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Scene">
+			<UniqueIdentifier>{bfddfb82-8a6a-45c0-9e58-93c6aa7d0906}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Scene\Heightmaps">
+			<UniqueIdentifier>{15298200-5ef2-45f7-91aa-279ecf432b1c}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Scene\Particles">
+			<UniqueIdentifier>{9ae08aeb-1732-40b9-8b05-cd8861aa07e8}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Scene\Postprocess">
+			<UniqueIdentifier>{5dad6d7e-2b80-49d2-8062-91f0badb05be}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Scene\Terrain">
+			<UniqueIdentifier>{743e9c70-5c16-4c98-9b74-14a5930e00d7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\UnitTests">
+			<UniqueIdentifier>{f556f039-4e2f-4081-848d-6ef7b914b5a1}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\UnitTests\Tests">
+			<UniqueIdentifier>{d5bf2b35-9794-4e91-92cf-d0f735068d70}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\Utils">
+			<UniqueIdentifier>{7eea1c91-680f-4cbe-9524-c4ce64f4cfaa}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\VisualScene">
+			<UniqueIdentifier>{60484f39-fab6-4bfa-aeb3-c589b11a9408}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\World">
+			<UniqueIdentifier>{e24bbb91-66b2-4b03-ad43-f5885e02df74}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Src\Linderdaum\World\AI">
+			<UniqueIdentifier>{0c4eef7c-5035-4fcc-aa8e-e60fbce09172}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="Src\Generated\Exports\Exports_Core.cpp">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\Exports\ExpReg_Core1.cpp">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\Exports\ExpReg_Core2.cpp">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\Exports\ExpReg_Core3.cpp">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\Exports\ExpReg_Core4.cpp">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\Exports\ExpReg_Core5.cpp">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\Exports\ExpReg_Core6.cpp">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\Exports\ExpReg_Core7.cpp">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\Globals\ColorRegistration.cpp">
+			<Filter>Src\Generated\Globals</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\Globals\KeySymbolsRegistration.cpp">
+			<Filter>Src\Generated\Globals</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\Globals\LColors.cpp">
+			<Filter>Src\Generated\Globals</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\LAL\LAL.cpp">
+			<Filter>Src\Generated\LAL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\LCL\LCL.cpp">
+			<Filter>Src\Generated\LCL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\LGL\LGL.cpp">
+			<Filter>Src\Generated\LGL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\LGL\LGLTracer.cpp">
+			<Filter>Src\Generated\LGL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Generated\Serialization\Serialization_LinderdaumCore.cpp">
+			<Filter>Src\Generated\Serialization</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Audio\Audio.cpp">
+			<Filter>Src\Linderdaum\Audio</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Audio\Audio_FMOD.cpp">
+			<Filter>Src\Linderdaum\Audio</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Audio\Audio_OpenAL.cpp">
+			<Filter>Src\Linderdaum\Audio</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Audio\MOD.cpp">
+			<Filter>Src\Linderdaum\Audio</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Audio\OGG.cpp">
+			<Filter>Src\Linderdaum\Audio</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\Console.cpp">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\CVars.cpp">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\iObject.cpp">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\Linker.cpp">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\Logger.cpp">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\RTTI\Field.cpp">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\RTTI\iStaticClass.cpp">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\RTTI\Property.cpp">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\RTTI\State.cpp">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\Script.cpp">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\ScriptCompiler.cpp">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\UUID.cpp">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\VFS\Archive.cpp">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\VFS\Files.cpp">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\VFS\FileSystem.cpp">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\VFS\libcompress.c">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\VFS\ML.cpp">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\VFS\MountPoint.cpp">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Core\VFS\pugixml.cpp">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Environment.cpp">
+			<Filter>Src\Linderdaum</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Geometry\Animation.cpp">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Geometry\ASE.cpp">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Geometry\Geom.cpp">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Geometry\GeomServ.cpp">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Geometry\Joints.cpp">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Geometry\LCM.cpp">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Geometry\MD5.cpp">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Geometry\Mesh.cpp">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Geometry\Surfaces.cpp">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Geometry\VAMender.cpp">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Geometry\VertexAttribs.cpp">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_BorderPanel.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_Bubbles.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_Button.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_Checkable.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_CheckBox.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_ColorDial.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_DialogWindow.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_FSGraph.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_Gauge.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_InputLine.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_ListBox.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_Memo.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_MtxView.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_Page.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_Panel.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_PushButton.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_RadioButton.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_RadioGroup.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_SceneView.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_Scroller.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_Sidebar.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_Slider.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_Splitters.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_StaticRect.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_StaticWidget.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_StdConsole.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_TabControl.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_TransitionPage.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\ComCtl\I_Window.cpp">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\FlowUI.cpp">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\GUIDesktop.cpp">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\GUIManager.cpp">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\iGUIRegion.cpp">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\iGUIResponder.cpp">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\iGUIView.cpp">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\Transitions\I_CrossFade.cpp">
+			<Filter>Src\Linderdaum\GUI\Transitions</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\GUI\Transitions\I_Slide.cpp">
+			<Filter>Src\Linderdaum\GUI\Transitions</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Images\Bitmap.cpp">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Images\FI_Utils.cpp">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Images\Guillotine.cpp">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Images\Image.cpp">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Images\ImageCache.cpp">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Images\ImageList.cpp">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Images\ImgLoad.cpp">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Images\RAW.cpp">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Images\TextRenderer.cpp">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Images\VolumeLib.cpp">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Input\Gestures.cpp">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Input\Gestures2.cpp">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Input\Input.cpp">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Input\NetDevices.cpp">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Input\OSInput.cpp">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Input\ScreenJoystick.cpp">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\LString.cpp">
+			<Filter>Src\Linderdaum</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\Collision.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LAABB.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LBox.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LCurve.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LFFT.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LFrustum.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LGeomUtils.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LGraph.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LMathStrings.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LMatrix.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LOBB.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LPoly.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LProjection.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LRandom.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LSphere.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LTransform.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Math\LVector.cpp">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Network\HTTP.cpp">
+			<Filter>Src\Linderdaum\Network</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Network\Network.cpp">
+			<Filter>Src\Linderdaum\Network</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Physics\BodyControllers.cpp">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Physics\BoxLite.cpp">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Physics\BoxScene.cpp">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Physics\Collider.cpp">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Physics\CollisionIntervals.cpp">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Physics\CollisionShape.cpp">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Physics\Control.cpp">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Physics\RigidBody.cpp">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Physics\SimplePhysics.cpp">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\Canvas.cpp">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\CL\CLContext.cpp">
+			<Filter>Src\Linderdaum\Renderer\CL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\DX11\DX11RenderContext.cpp">
+			<Filter>Src\Linderdaum\Renderer\DX11</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\GL\GLAPIContainer.cpp">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\GL\GLBuffer.cpp">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\GL\GLDebug.cpp">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\GL\GLFrameBuffer.cpp">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\GL\GLQuery.cpp">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\GL\GLRenderContext.cpp">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\GL\GLSL.cpp">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\GL\GLTexture.cpp">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\GL\GLVertexArray.cpp">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\iRenderContext.cpp">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\iShaderProgram.cpp">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\iTexture.cpp">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\iVertexArray.cpp">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\RenderState.cpp">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\Soft\SoftFrameBuffer.cpp">
+			<Filter>Src\Linderdaum\Renderer\Soft</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\Soft\SoftRenderContext.cpp">
+			<Filter>Src\Linderdaum\Renderer\Soft</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Renderer\VolumeRenderer.cpp">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Resources\iResource.cpp">
+			<Filter>Src\Linderdaum\Resources</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Resources\ResourcesManager.cpp">
+			<Filter>Src\Linderdaum\Resources</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Resources\VFW.cpp">
+			<Filter>Src\Linderdaum\Resources</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\CSM.cpp">
+			<Filter>Src\Linderdaum\Scene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\GameCamera.cpp">
+			<Filter>Src\Linderdaum\Scene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Heightmaps\HeightMapFacetter.cpp">
+			<Filter>Src\Linderdaum\Scene\Heightmaps</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Heightmaps\LHeightMap.cpp">
+			<Filter>Src\Linderdaum\Scene\Heightmaps</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\iUpdater.cpp">
+			<Filter>Src\Linderdaum\Scene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\LVLib.cpp">
+			<Filter>Src\Linderdaum\Scene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Material.cpp">
+			<Filter>Src\Linderdaum\Scene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Particles\GPUParticles.cpp">
+			<Filter>Src\Linderdaum\Scene\Particles</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Particles\ParticleSystem.cpp">
+			<Filter>Src\Linderdaum\Scene\Particles</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Postprocess\ASSAO.cpp">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Postprocess\FeedbackScreen.cpp">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Postprocess\Filter.cpp">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Postprocess\HDRPP.cpp">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Postprocess\iPostprocessor.cpp">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Postprocess\MLAA.cpp">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Postprocess\RenderingTechnique.cpp">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Scene.cpp">
+			<Filter>Src\Linderdaum\Scene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Scene\Terrain\Terrain.cpp">
+			<Filter>Src\Linderdaum\Scene\Terrain</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\SysEnv.cpp">
+			<Filter>Src\Linderdaum</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\UnitTests\Tests.cpp">
+			<Filter>Src\Linderdaum\UnitTests</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Utils\DateTime.cpp">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Utils\Event.cpp">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Utils\Exceptions.cpp">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Utils\LArray.cpp">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Utils\Library.cpp">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Utils\Localizer.cpp">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Utils\Screen.cpp">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Utils\Thread.cpp">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Utils\Utils.cpp">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\Utils\Viewport.cpp">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\VisualScene\CameraPositioner.cpp">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\VisualScene\Edit.cpp">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\VisualScene\Gizmos.cpp">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\VisualScene\Prefab.cpp">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\VisualScene\Trajectory.cpp">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\VisualScene\VisualCamera.cpp">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\VisualScene\VisualGraph.cpp">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\VisualScene\VisualObject.cpp">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\VisualScene\VisualProjector.cpp">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\VisualScene\VisualRenderables.cpp">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\VisualScene\VisualScene.cpp">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\World\AI\Behaviour.cpp">
+			<Filter>Src\Linderdaum\World\AI</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\World\AI\Pathfinder.cpp">
+			<Filter>Src\Linderdaum\World\AI</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\World\Entity.cpp">
+			<Filter>Src\Linderdaum\World</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\World\HighScores.cpp">
+			<Filter>Src\Linderdaum\World</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\World\iActor.cpp">
+			<Filter>Src\Linderdaum\World</Filter>
+		</ClCompile>
+		<ClCompile Include="Src\Linderdaum\World\World.cpp">
+			<Filter>Src\Linderdaum\World</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="Src\ExtLibs\CL\cl.h">
+			<Filter>Src\ExtLibs\CL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\CL\cl_d3d10.h">
+			<Filter>Src\ExtLibs\CL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\CL\cl_ext.h">
+			<Filter>Src\ExtLibs\CL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\CL\cl_gl.h">
+			<Filter>Src\ExtLibs\CL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\CL\cl_gl_ext.h">
+			<Filter>Src\ExtLibs\CL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\CL\cl_platform.h">
+			<Filter>Src\ExtLibs\CL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\CL\opencl.h">
+			<Filter>Src\ExtLibs\CL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\DInput\dinput.h">
+			<Filter>Src\ExtLibs\DInput</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\FMOD\fmod.h">
+			<Filter>Src\ExtLibs\FMOD</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\FMOD\fmod.hpp">
+			<Filter>Src\ExtLibs\FMOD</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\FMOD\fmod_codec.h">
+			<Filter>Src\ExtLibs\FMOD</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\FMOD\fmod_dsp.h">
+			<Filter>Src\ExtLibs\FMOD</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\FMOD\fmod_errors.h">
+			<Filter>Src\ExtLibs\FMOD</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\FMOD\fmod_memoryinfo.h">
+			<Filter>Src\ExtLibs\FMOD</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\FMOD\fmod_output.h">
+			<Filter>Src\ExtLibs\FMOD</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\GL\gl3.h">
+			<Filter>Src\ExtLibs\GL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\GL\glxext.h">
+			<Filter>Src\ExtLibs\GL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\GL\wglext.h">
+			<Filter>Src\ExtLibs\GL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\half.h">
+			<Filter>Src\ExtLibs</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\micropather.h">
+			<Filter>Src\ExtLibs</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\ModPlug\modplug.h">
+			<Filter>Src\ExtLibs\ModPlug</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\OpenAL\al.h">
+			<Filter>Src\ExtLibs\OpenAL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\OpenAL\alc.h">
+			<Filter>Src\ExtLibs\OpenAL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\OpenAL\alctypes.h">
+			<Filter>Src\ExtLibs\OpenAL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\OpenAL\altypes.h">
+			<Filter>Src\ExtLibs\OpenAL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\OpenAL\alut.h">
+			<Filter>Src\ExtLibs\OpenAL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\RSC\compiler_funcs.h">
+			<Filter>Src\ExtLibs\RSC</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\RSC\compiler_log_interface.h">
+			<Filter>Src\ExtLibs\RSC</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\RSC\compiler_types.h">
+			<Filter>Src\ExtLibs\RSC</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\RSC\interface_defs.h">
+			<Filter>Src\ExtLibs\RSC</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\RSC\sys_interface.h">
+			<Filter>Src\ExtLibs\RSC</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\Vorbis\codec.h">
+			<Filter>Src\ExtLibs\Vorbis</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\Vorbis\link_funcs.h">
+			<Filter>Src\ExtLibs\Vorbis</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\Vorbis\ogg\config_types.h">
+			<Filter>Src\ExtLibs\Vorbis\ogg</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\Vorbis\ogg\ogg.h">
+			<Filter>Src\ExtLibs\Vorbis\ogg</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\Vorbis\ogg\os_types.h">
+			<Filter>Src\ExtLibs\Vorbis\ogg</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\ExtLibs\Vorbis\vorbisfile.h">
+			<Filter>Src\ExtLibs\Vorbis</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\AsyncCapsule.h">
+			<Filter>Src\Generated</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\CoreExport_Includes.h">
+			<Filter>Src\Generated</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\CoreSerialization_Defs.h">
+			<Filter>Src\Generated</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clBehaviour_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clCompositeBehaviour_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clEntity_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clFilterPostprocessor_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clFlingHandler2_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clFlingHandler_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clGestureHandler_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clGUITransitionPage_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clGUIWindow_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clHighScores_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clParallel_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clPinchZoomHandler_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clSelector_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clSequence_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clTestClient_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\clValidator_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\Exports_Core.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\iActor_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\iApplet_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\iCameraPositioner_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\iKernel2D_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\iObject_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\iPlacementConstraint_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\iPostprocessor_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\iQuery_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\iStringsApplet_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\iTestApplet_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\iUpdater_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Exports\RigidBodyController_Tunneller.h">
+			<Filter>Src\Generated\Exports</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Functors.h">
+			<Filter>Src\Generated</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Globals\ColorRegistration.h">
+			<Filter>Src\Generated\Globals</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\Globals\KeySymbolsRegistration.h">
+			<Filter>Src\Generated\Globals</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\LAL\LAL.h">
+			<Filter>Src\Generated\LAL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\LCL\LCL.h">
+			<Filter>Src\Generated\LCL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\LGL\LGL.h">
+			<Filter>Src\Generated\LGL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\LGL\LGLAPI.h">
+			<Filter>Src\Generated\LGL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\LGL\LGLTracer.h">
+			<Filter>Src\Generated\LGL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\MethodBind.h">
+			<Filter>Src\Generated</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\VM\ExecThread_MtdArray.h">
+			<Filter>Src\Generated\VM</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\VM\ExecThread_MtdList.h">
+			<Filter>Src\Generated\VM</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Generated\VM\LOpCodes.h">
+			<Filter>Src\Generated\VM</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Audio\Audio.h">
+			<Filter>Src\Linderdaum\Audio</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Audio\Audio_FMOD.h">
+			<Filter>Src\Linderdaum\Audio</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Audio\Audio_OpenAL.h">
+			<Filter>Src\Linderdaum\Audio</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Audio\MOD.h">
+			<Filter>Src\Linderdaum\Audio</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Audio\OGG.h">
+			<Filter>Src\Linderdaum\Audio</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Audio\WAV.h">
+			<Filter>Src\Linderdaum\Audio</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\Console.h">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\CVars.h">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\iIntrusivePtr.h">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\iObject.h">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\Linker.h">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\Logger.h">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\RTTI\Field.h">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\RTTI\FieldBinding.h">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\RTTI\iStaticClass.h">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\RTTI\Method.h">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\RTTI\Parameters.h">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\RTTI\Property.h">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\RTTI\PropertyMacros.h">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\RTTI\State.h">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\RTTI\Symbol.h">
+			<Filter>Src\Linderdaum\Core\RTTI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\Script.h">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\ScriptCompiler.h">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\UUID.h">
+			<Filter>Src\Linderdaum\Core</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\VFS\Archive.h">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\VFS\Files.h">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\VFS\FileSystem.h">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\VFS\iIStream.h">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\VFS\iOStream.h">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\VFS\libcompress.h">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\VFS\ML.h">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\VFS\MountPoint.h">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Core\VFS\pugixml.hpp">
+			<Filter>Src\Linderdaum\Core\VFS</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Engine.h">
+			<Filter>Src\Linderdaum</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Environment.h">
+			<Filter>Src\Linderdaum</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\Animation.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\AnimSequence.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\ASE.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\AttribStream.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\Geom.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\GeomServ.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\Joints.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\LCM.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\MD5.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\Mesh.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\Surfaces.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\VAMender.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Geometry\VertexAttribs.h">
+			<Filter>Src\Linderdaum\Geometry</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_BorderPanel.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_Bubbles.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_Button.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_Checkable.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_CheckBox.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_ColorDial.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_DialogWindow.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_FSGraph.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_Gauge.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_InputLine.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_ListBox.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_Memo.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_MtxView.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_Page.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_Panel.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_PushButton.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_RadioButton.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_RadioGroup.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_SceneView.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_Scroller.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_Sidebar.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_Slider.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_Splitters.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_StaticRect.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_StaticWidget.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_StdConsole.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_TabControl.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_TransitionPage.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\ComCtl\I_Window.h">
+			<Filter>Src\Linderdaum\GUI\ComCtl</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\FlowUI.h">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\GUIDesktop.h">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\GUIManager.h">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\iGUIRegion.h">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\iGUIResponder.h">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\iGUIView.h">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\iValidators.h">
+			<Filter>Src\Linderdaum\GUI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\Transitions\I_CrossFade.h">
+			<Filter>Src\Linderdaum\GUI\Transitions</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\GUI\Transitions\I_Slide.h">
+			<Filter>Src\Linderdaum\GUI\Transitions</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Images\Bitmap.h">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Images\FI_SaveLoadFlags.h">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Images\FI_Utils.h">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Images\ft.h">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Images\Guillotine.h">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Images\Image.h">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Images\ImageCache.h">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Images\ImageList.h">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Images\ImgLoad.h">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Images\RAW.h">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Images\TextRenderer.h">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Images\VolumeLib.h">
+			<Filter>Src\Linderdaum\Images</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Input\FlowSelector.h">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Input\Gestures.h">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Input\Gestures2.h">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Input\Input.h">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Input\NetDevices.h">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Input\OSInput.h">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Input\ScreenJoystick.h">
+			<Filter>Src\Linderdaum\Input</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\LColors.h">
+			<Filter>Src\Linderdaum</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\LKeys.h">
+			<Filter>Src\Linderdaum</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\LString.h">
+			<Filter>Src\Linderdaum</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\Collision.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LAABB.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LBlending.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LBox.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LCurve.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LFFT.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LFrustum.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LGears.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LGeomUtils.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LGraph.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LHash.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LHistogram.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LHull.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LKeyframer.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LLine.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LMath.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LMathStrings.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LMatrix.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LOBB.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LPlane.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LPoly.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LProjection.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LQuaternion.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LRandom.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LRect.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LSize.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LSort.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LSphere.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LTransform.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\LVector.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Math\Trackball.h">
+			<Filter>Src\Linderdaum\Math</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Network\HTTP.h">
+			<Filter>Src\Linderdaum\Network</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Network\Network.h">
+			<Filter>Src\Linderdaum\Network</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Physics\BodyControllers.h">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Physics\BoxLite.h">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Physics\BoxScene.h">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Physics\Collider.h">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Physics\CollisionIntervals.h">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Physics\CollisionShape.h">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Physics\Control.h">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Physics\RigidBody.h">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Physics\SimplePhysics.h">
+			<Filter>Src\Linderdaum\Physics</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Platform.h">
+			<Filter>Src\Linderdaum</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\ProjectSetup.h">
+			<Filter>Src\Linderdaum</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Protection.h">
+			<Filter>Src\Linderdaum</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\Canvas.h">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\CL\CLContext.h">
+			<Filter>Src\Linderdaum\Renderer\CL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\DX11\DX11RenderContext.h">
+			<Filter>Src\Linderdaum\Renderer\DX11</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\GL\GLAPIContainer.h">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\GL\GLBuffer.h">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\GL\GLDebug.h">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\GL\GLFrameBuffer.h">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\GL\GLQuery.h">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\GL\GLRenderContext.h">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\GL\GLSL.h">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\GL\GLTexture.h">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\GL\GLVertexArray.h">
+			<Filter>Src\Linderdaum\Renderer\GL</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\iGPGPUContext.h">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\iGPUBuffer.h">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\iQuery.h">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\iRenderContext.h">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\iRenderTarget.h">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\iShaderProgram.h">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\iTexture.h">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\iVertexArray.h">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\RenderState.h">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\Soft\SoftFrameBuffer.h">
+			<Filter>Src\Linderdaum\Renderer\Soft</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\Soft\SoftRenderContext.h">
+			<Filter>Src\Linderdaum\Renderer\Soft</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\Soft\SoftShaderProgram.h">
+			<Filter>Src\Linderdaum\Renderer\Soft</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\Soft\SoftTexture.h">
+			<Filter>Src\Linderdaum\Renderer\Soft</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\Soft\SoftVertexArray.h">
+			<Filter>Src\Linderdaum\Renderer\Soft</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Renderer\VolumeRenderer.h">
+			<Filter>Src\Linderdaum\Renderer</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Resources\iResource.h">
+			<Filter>Src\Linderdaum\Resources</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Resources\iVideoDecoder.h">
+			<Filter>Src\Linderdaum\Resources</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Resources\iVideoEncoder.h">
+			<Filter>Src\Linderdaum\Resources</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Resources\ResourcesManager.h">
+			<Filter>Src\Linderdaum\Resources</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Resources\VFW.h">
+			<Filter>Src\Linderdaum\Resources</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\CSM.h">
+			<Filter>Src\Linderdaum\Scene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\GameCamera.h">
+			<Filter>Src\Linderdaum\Scene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Heightmaps\HeightDataProvider.h">
+			<Filter>Src\Linderdaum\Scene\Heightmaps</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Heightmaps\HeightMapFacetter.h">
+			<Filter>Src\Linderdaum\Scene\Heightmaps</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Heightmaps\LHeightMap.h">
+			<Filter>Src\Linderdaum\Scene\Heightmaps</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\iUpdater.h">
+			<Filter>Src\Linderdaum\Scene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\LVLib.h">
+			<Filter>Src\Linderdaum\Scene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Material.h">
+			<Filter>Src\Linderdaum\Scene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Particles\GPUParticles.h">
+			<Filter>Src\Linderdaum\Scene\Particles</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Particles\ParticleSystem.h">
+			<Filter>Src\Linderdaum\Scene\Particles</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Postprocess\ASSAO.h">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Postprocess\FeedbackScreen.h">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Postprocess\Filter.h">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Postprocess\HDRPP.h">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Postprocess\iPostprocessor.h">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Postprocess\MLAA.h">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Postprocess\RenderingTechnique.h">
+			<Filter>Src\Linderdaum\Scene\Postprocess</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Scene.h">
+			<Filter>Src\Linderdaum\Scene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Scene\Terrain\Terrain.h">
+			<Filter>Src\Linderdaum\Scene\Terrain</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\SysEnv.h">
+			<Filter>Src\Linderdaum</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Classes_Test_8.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Classes_Test_9.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Test_1.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Test_10.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Test_11.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Test_12.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Test_2.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Test_3.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Test_4.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Test_5.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Test_6.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Test_7.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Test_8.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests\Test_9.h">
+			<Filter>Src\Linderdaum\UnitTests\Tests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\UnitTests\Tests.h">
+			<Filter>Src\Linderdaum\UnitTests</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\DateTime.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\Event.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\Exceptions.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\iStack.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\L2DBitArray.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\LArray.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\LBlob.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\Library.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\LJNI.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\Localizer.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\LPool.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\LURL.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\Mutex.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\PlatformGCC.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\PlatformMSVC.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\Screen.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\Thread.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\TypeLists.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\TypeTraits.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\Utils.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\Utils\Viewport.h">
+			<Filter>Src\Linderdaum\Utils</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\VisualScene\CameraPositioner.h">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\VisualScene\Edit.h">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\VisualScene\Gizmos.h">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\VisualScene\Prefab.h">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\VisualScene\Trajectory.h">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\VisualScene\VisualCamera.h">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\VisualScene\VisualGraph.h">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\VisualScene\VisualModifier.h">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\VisualScene\VisualObject.h">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\VisualScene\VisualProjector.h">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\VisualScene\VisualRenderables.h">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\VisualScene\VisualScene.h">
+			<Filter>Src\Linderdaum\VisualScene</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\World\AI\2DUniformGrid.h">
+			<Filter>Src\Linderdaum\World\AI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\World\AI\Behaviour.h">
+			<Filter>Src\Linderdaum\World\AI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\World\AI\Pathfinder.h">
+			<Filter>Src\Linderdaum\World\AI</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\World\Entity.h">
+			<Filter>Src\Linderdaum\World</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\World\HighScores.h">
+			<Filter>Src\Linderdaum\World</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\World\iActor.h">
+			<Filter>Src\Linderdaum\World</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum\World\World.h">
+			<Filter>Src\Linderdaum\World</Filter>
+		</ClInclude>
+		<ClInclude Include="Src\Linderdaum.h">
+			<Filter>Src</Filter>
+		</ClInclude>
+	</ItemGroup>
+</Project>

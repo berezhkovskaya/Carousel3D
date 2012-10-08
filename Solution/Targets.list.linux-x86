@@ -1,0 +1,15 @@
+USEDLIBS = -lstdc++ -lX11 -lGL
+
+CFLAGS = -m64 -fpermissive -O2
+
+####################
+# Targets
+####################
+
+GAMEA: $(OBJS)
+	rm -f Obj/Game.a
+	ar -ru Obj/Game.a $(OBJS)
+
+all: $(OBJS) GAMEA
+#$(OBJS)
+	$(CC) $(COPTS) $(CFLAGS) -o <!MODULE_NAME!> <!MAIN_CPP_NAME!> Obj/Game.a <!LSDK_PATH!>/Out/Obj/libLinderdaumEngine.a $(USEDLIBS)

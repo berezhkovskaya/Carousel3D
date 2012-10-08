@@ -1,0 +1,18 @@
+USEDLIBS = -lgdi32 -lstdc++ -lmsvfw32
+
+# CFLAGS = -m32 -fomit-frame-pointer -fpermissive -msse3 -s -O2
+
+# Let's check if this is a faster at compile time
+CFLAGS = -m32 -fomit-frame-pointer -fpermissive
+
+####################
+# Targets
+####################
+
+GAMEA: $(OBJS)
+	rm -f Obj/Game.a
+	ar -ru Obj/Game.a $(OBJS)
+
+all: $(OBJS) GAMEA
+#$(OBJS)
+	$(CC) $(COPTS) $(CFLAGS) -o <!MODULE_NAME!> <!MAIN_CPP_NAME!> Obj/Game.a <!LSDK_PATH!>/Out/Obj/libLinderdaumEngine.a $(USEDLIBS)

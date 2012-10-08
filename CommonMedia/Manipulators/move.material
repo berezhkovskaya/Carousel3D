@@ -1,0 +1,14 @@
+;
+
+Object("clMaterial")
+{
+   MaterialClass "default"
+   AmbientMap "MoveRotate.tga"
+;   DiffuseMap "MoveRotate.tga"
+   AmbientColor 0.0 0.0 0.0 1.0
+   DiffuseColor 0.2 0.2 0.2 1.0
+   SpecularColor 0.6 0.6 0.6 1.0
+
+   CastShadow false
+   ReceiveShadow false
+}

@@ -1,0 +1,11 @@
+# 64-bit
+CFLAGS = -fomit-frame-pointer -msse3 -fpermissive -s -O2
+
+####################
+# Targets
+####################
+
+all: $(OBJS)
+#$(OBJS)
+	rm -f Out/Obj/libLinderdaumEngine.a
+	ar -ru Out/Obj/libLinderdaumEngine.a $(OBJS)

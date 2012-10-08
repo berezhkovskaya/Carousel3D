@@ -1,0 +1,11 @@
+
+# MeeGo port configuration
+
+INCLUDEPATH += Src
+INCLUDEPATH += Src/Linderdaum
+
+TEMPLATE = lib
+CONFIG += staticlib
+
+OBJECTS_DIR = Out/Qt
+DESTDIR     = Out

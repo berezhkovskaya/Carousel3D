@@ -1,0 +1,13 @@
+include 'libguid.Makefile'
+
+# 32-bit
+CFLAGS = -fomit-frame-pointer -msse3 -fpermissive -s -O2
+
+####################
+# Targets
+####################
+
+all: $(OBJS) libguid
+#$(OBJS)
+	rm -f Out/Obj/libLinderdaumEngine.a
+	ar -ru Out/Obj/libLinderdaumEngine.a $(OBJS) $(LIBGUIDOBJS)

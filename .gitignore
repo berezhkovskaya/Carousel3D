@@ -10,3 +10,16 @@
 *.lai
 *.la
 *.a
+
+*.suo
+*.sdf
+*.opensdf
+*.bsc
+*.pdb
+*.ilk
+*.log
+*.history
+
+Out/
+
+Apps/*/*.exe

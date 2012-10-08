@@ -1,0 +1,13 @@
+USEDLIBS    = -lstdc++ -lX11 -lGL
+
+# for 64-bit only
+CFLAGS = -m64 -fpermissive -O2 -s -I Src/ExtLibs
+
+####################
+# Targets
+####################
+
+all: $(OBJS)
+#$(OBJS)
+	rm -f Out/Obj/libLinderdaumEngine.a
+	ar -ru Out/Obj/libLinderdaumEngine.a $(OBJS)
