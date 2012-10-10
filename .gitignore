@@ -23,3 +23,7 @@
 Out/
 
 Apps/*/*.exe
+Apps/*/assets/
+Apps/*/bin/
+Apps/*/gen/
+Apps/*/obj/
