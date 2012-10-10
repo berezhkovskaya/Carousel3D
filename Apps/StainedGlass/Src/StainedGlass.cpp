@@ -11,6 +11,8 @@ sEnvironment* Env = NULL;
 
 void DrawOverlay( LEvent Event, const LEventArgs& Args )
 {
+	Env->Renderer->GetCanvas()->Rect( 0.2f, 0.2f, 0.8f, 0.8f, LC_Red );
+	Env->Renderer->GetCanvas()->Flush();
 }
 
 APPLICATION_ENTRY_POINT

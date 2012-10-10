@@ -1,0 +1,6 @@
+# view AndroidManifest.xml #generated:36
+-keep class com.google.ads.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:25
+-keep class com.linderdaum.engine.liquidpaint.Test_FingerPaintActivity { <init>(...); }
+
