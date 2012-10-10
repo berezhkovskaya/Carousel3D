@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CommonMedia" default="copy-common-media">
+
+    <target name="copy-common-media" depends="copy-game-data">
+			<!-- CommonMedia assembly (files from Game data override those from CommonMedia ) -->
+        <copy todir="assets/Data">
+            <fileset dir="../../CommonMedia.ES">
+            </fileset>
+        </copy>
+        <copy todir="assets/Data">
+            <fileset dir="../../CommonMedia">
+                <exclude name="Data_Tests/"/>
+                <exclude name="RS/"/>
+                <exclude name="VolumeLib/"/>
+                <exclude name="Manipulators/"/>
+                <exclude name="Models/"/>
+                <exclude name="Textures/Cursors/"/>
+                <exclude name="Programs/PostProcessing/MLAA/"/>
+
+                <exclude name="RenderToVolume.sp"/>
+                <exclude name="build_server_commonmedia.bat"/>
+                <exclude name="CommonMedia.rar"/>
+                <exclude name="CommonMedia.tar"/>
+
+                <exclude name="Textures/mosaic.bmp"/>
+                <exclude name="Textures/StreaksRotationPattern.bmp"/>
+            </fileset>
+        </copy>
+    </target>
+
+</project>
