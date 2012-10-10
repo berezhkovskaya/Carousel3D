@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Test_FingerPaint" default="help">
+<project name="StainedGlass" default="help">
 
     <import file="../../BuildAndroid/CommonMedia.xml"/>
 
