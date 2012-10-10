@@ -22,7 +22,7 @@
                  android:icon="@drawable/icon"
                  android:installLocation="preferExternal"
                  android:debuggable="false">
-        <activity android:name="com.linderdaum.engine.liquidpaint.Test_FingerPaintActivity"
+        <activity android:name="com.linderdaum.engine.liquidpaint.StainedGlassActivity"
                   android:launchMode="singleTask"
                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
                   android:screenOrientation="portrait"

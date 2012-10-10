@@ -401,7 +401,7 @@
 						Name = "engine"
 						Filter = "">
 						<File
-							RelativePath=".\Src\com\linderdaum\engine\Test_FingerPaintActivity.java">
+							RelativePath=".\Src\com\linderdaum\engine\StainedGlassActivity.java">
 						</File>
 					</Filter>
 				</Filter>
