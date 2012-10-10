@@ -1,7 +1,0 @@
-; desktop
-
-; useful to configure all inheritable properties, i.e. fonts, for all GUI views
-
-Object("clGUIDesktop")
-{
-}
