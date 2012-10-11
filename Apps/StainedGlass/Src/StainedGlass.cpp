@@ -56,7 +56,9 @@ void DrawCarousel(int n, float r) {
 		LVector3 p11 = LVector3(r * cos(alpEnd), r * sin(alpEnd), h / 2);
 		LVector3 p01 = LVector3(r * cos(alpEnd), r * sin(alpEnd), -h / 2);
 		//Env->Renderer->GetCanvas()->TexturedRect3D(p00, p10, p11, p01, Img->GetTexture(), NULL, true);
-		Env->Renderer->GetCanvas()->TexturedRect3D(p00, p10, p11, p01, NULL, SP, false);
+		SP->BindUniforms();
+		SP->SetUniformNameVec4Array("u_Color", 1, vec4( 1.f * i / n, 0.f, 1 - 1.f * i / n , 1.f )); 		
+		Env->Renderer->GetCanvas()->TexturedRect3D(p00, p10, p11, p01, NULL, SP, true);
 	}    	
 
 	Env->Renderer->GetCanvas()->Flush();

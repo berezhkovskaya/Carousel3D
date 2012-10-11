@@ -21,11 +21,12 @@ void main()
 
 in vec2 TexCoord;
 
+uniform vec4 u_Color;
 uniform vec4 RectColor;
 
 out vec4 out_FragColor;
 
 void main()
 {
-   out_FragColor = vec4( 1.0, TexCoord.x, TexCoord.y, 1.0 );
+   out_FragColor = u_Color;
 }
