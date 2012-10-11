@@ -21,6 +21,7 @@
 *.history
 
 Out/
+ipch/
 
 Apps/*/*.exe
 Apps/*/assets/
