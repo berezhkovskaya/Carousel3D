@@ -22,7 +22,7 @@
                  android:icon="@drawable/icon"
                  android:installLocation="preferExternal"
                  android:debuggable="false">
-        <activity android:name="com.linderdaum.engine.liquidpaint.StainedGlassActivity"
+        <activity android:name="com.linderdaum.engine.stainedglass.StainedGlassActivity"
                   android:launchMode="singleTask"
                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
                   android:screenOrientation="portrait"
