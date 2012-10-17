@@ -12,8 +12,8 @@ uniform mat4 ProjectionMatrix;
 
 out vec2 TexCoord;
 
-varying vec3 l;
-varying vec3 n;
+out vec3 l;
+out vec3 n;
 
 void main()
 {
@@ -29,8 +29,8 @@ void main()
 
 in vec2 TexCoord;
 
-varying vec3 l;
-varying vec3 n;
+in vec3 l;
+in vec3 n;
 
 uniform vec4 u_Color;
 
