@@ -39,13 +39,22 @@ float                 r = 0.9f;
 int                   n = 6;
 bool                  newMousePressedL;
 
+const int maxclVA = 6;
+clVertexAttribs*      clVA[maxclVA];
+int cntclVA = 0;
+
+const int maxiVA = 6;
+iVertexArray*      iiVA[maxiVA];
+int cntiVA = 0;
+
+
 void drawRect3D_1(LVector3& p00, LVector3& p10, LVector3& p11, LVector3& p01, clRenderState* State ) {
 	
-
-
-
-	
-	clVertexAttribs* VA = clVertexAttribs::CreateEmpty();
+	clVertexAttribs* VA = clVA[cntclVA];
+	if (VA == NULL) {
+		VA = clVertexAttribs::CreateEmpty();
+	}
+	cntclVA = (cntclVA + 1) % maxclVA;
 
 	VA->Restart( L_PT_TRIANGLE_STRIP, 4, L_TEXCOORDS_BIT | L_NORMALS_BIT );
 	LVector3 n = LVector3((p10 - p00).Cross(p01 - p00));
@@ -69,7 +78,11 @@ void drawRect3D_1(LVector3& p00, LVector3& p10, LVector3& p11, LVector3& p01, cl
 	State->GetShaderProgram()->SetUniformNameVec3Array( "u_Normal", 1, n);
 
 
-	iVertexArray* iVA = Env->Renderer->AllocateEmptyVA();
+	iVertexArray* iVA = iiVA[cntiVA];
+	if (iVA == NULL) {
+		iVA = Env->Renderer->AllocateEmptyVA();
+	}
+	cntiVA = (cntiVA + 1) % maxiVA;
 	iVA->SetVertexAttribs(VA);
 	iVA->CommitChanges();
 	Env->Renderer->AddBuffer( iVA, State, 1, false );
