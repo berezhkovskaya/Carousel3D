@@ -11,6 +11,8 @@ sEnvironment* Env = NULL;
 
 LMatrix4              Projection;
 LMatrix4              Trans;
+LMatrix4              Trans1;
+
 LMatrix3              rotation;
 LMatrix3              rotationXY;
 LMatrix3              rotationYZ;
@@ -34,31 +36,26 @@ float                 roalp;
 float                 startRotYAlp = Math::PI / 3;
 float                 currentYAngle = startRotYAlp;
 LVector4              plane = LVector4(0.f, cos(Math::PI / 2 - startRotYAlp), sin(Math::PI / 2 - startRotYAlp), 1.1f);
+LVector4              plane0 = LVector4(0.f, cos(Math::PI / 2 - startRotYAlp), sin(Math::PI / 2 - startRotYAlp), 0.f);
+
 //float                 inf = 1.2;
 float                 r = 0.9f;
 int                   n = 6;
 bool                  newMousePressedL;
 
-const int maxclVA = 6;
-clVertexAttribs*      clVA[maxclVA];
-int cntclVA = 0;
+clVertexAttribs*      clVA;
 
-const int maxiVA = 6;
-iVertexArray*      iiVA[maxiVA];
-int cntiVA = 0;
+iVertexArray*      iiVA;
+iRenderTarget* iRT;
 
-
-void drawRect3D_1(LVector3& p00, LVector3& p10, LVector3& p11, LVector3& p01, clRenderState* State ) {
+void drawRect3D_1(LVector3 p00, LVector3 p10, LVector3 p11, LVector3 p01, LVector3 n, clRenderState* State ) {
 	
-	clVertexAttribs* VA = clVA[cntclVA];
-	if (VA == NULL) {
-		VA = clVertexAttribs::CreateEmpty();
+	if (clVA == NULL) {
+		clVA = clVertexAttribs::CreateEmpty();
 	}
-	cntclVA = (cntclVA + 1) % maxclVA;
+	clVertexAttribs* VA = clVA;	
 
 	VA->Restart( L_PT_TRIANGLE_STRIP, 4, L_TEXCOORDS_BIT | L_NORMALS_BIT );
-	LVector3 n = LVector3((p10 - p00).Cross(p01 - p00));
-	n.Normalize();
 	
 	VA->SetNormalV( n );
 
@@ -78,19 +75,23 @@ void drawRect3D_1(LVector3& p00, LVector3& p10, LVector3& p11, LVector3& p01, cl
 	State->GetShaderProgram()->SetUniformNameVec3Array( "u_Normal", 1, n);
 
 
-	iVertexArray* iVA = iiVA[cntiVA];
-	if (iVA == NULL) {
-		iVA = Env->Renderer->AllocateEmptyVA();
+
+	if (iiVA == NULL) {
+		iiVA = Env->Renderer->AllocateEmptyVA();
 	}
-	cntiVA = (cntiVA + 1) % maxiVA;
+	iVertexArray* iVA = iiVA;
+
 	iVA->SetVertexAttribs(VA);
 	iVA->CommitChanges();
 	Env->Renderer->AddBuffer( iVA, State, 1, false );
 }
 
-void drawRect3D(LVector3& p00, LVector3& p10, LVector3& p11, LVector3& p01, clRenderState* State ) {
-	drawRect3D_1(p00, p10, p11, p01, State);
-	//drawRect3D_1(p00, p01, p11, p10, State);
+void drawRect3D(LVector3 p00, LVector3 p10, LVector3 p11, LVector3 p01, clRenderState* State ) {
+	LVector3 n = LVector3((p10 - p00).Cross(p01 - p00)); 
+	n.Normalize();
+	float e = 0.001f;
+	drawRect3D_1(p00 + n * e, p10 + n * e, p11 + n * e, p01 + n * e,  n, State);
+	drawRect3D_1(p00 - n * e, p10 - n * e, p11 - n * e, p01 - n * e, -n, State);
 }
 
 LVector3 getSymm(LVector3 p, LVector4 plane) {
@@ -142,7 +143,7 @@ void drawPlaneSquare(LVector4 plane, clRenderState* rendState) {
 	LVector3 n = plane.ToVector3();
 	LVector3 v1 = LVector3(1.f, 0.f, 0.f);
 	LVector3 v2 = n.Cross(v1);
-	float r = 2.f;	
+	float r = 1.f;	
 	LVector3 p0 = -n * plane.W;
 
 	p00 = p0 + v1 * r + v2 * r;
@@ -153,44 +154,8 @@ void drawPlaneSquare(LVector4 plane, clRenderState* rendState) {
 	Env->Renderer->GetCanvas()->Rect3DShader(p00, p10, p11, p01, rendState);
     Env->Renderer->GetCanvas()->Flush();
 }
-
-void DrawCarousel() {   
-    alp = 2 * Math::PI / (3 * n);
-    h = 800.f / 480 * r * sin(alp) * 2;
-    newMousePressedL = Env->Console->IsKeyPressed( LK_LBUTTON );
-    MousePosition = Env->Viewport->GetMousePosition();    
-    if (!MousePressedL && newMousePressedL) {
-        startPos = MousePosition;
-    }
-    if (MousePressedL && !newMousePressedL) {
-        currentXAngle += addXAngle;
-        currentYAngle += addYAngle;
-    }
-    addXAngle = 0;
-    addYAngle = 0;
-
-    if (newMousePressedL) {
-        addXAngle = -asin(MousePosition[0]) + asin(startPos[0]);
-        addYAngle = -asin(MousePosition[1]) + asin(startPos[1]);
-    }
-    //Env->Viewport->UpdateTrackball( &Trackball, 10.0f, MousePressedL );
-    ralp = currentYAngle + addYAngle;
-    roalp = currentXAngle + addXAngle;
-    //ralp = 0;
-    //roalp = 0;
-    rotationXY = LMatrix3(LVector3(cos(roalp), -sin(roalp), 0.f), 
-                          LVector3(sin(roalp), cos(roalp),  0.f),
-                          LVector3(0.f,        0.f,         1.f));
-    rotationYZ = LMatrix3(LVector3(1.f, 0.f,       0.f), 
-                          LVector3(0.f, cos(ralp), -sin(ralp)),
-                          LVector3(0.f, sin(ralp), cos(ralp)));
-    rotation = rotationXY * rotationYZ;
-
-    MousePressedL = newMousePressedL;
-
-    Projection = Math::Perspective( 45.0f, Env->Viewport->GetAspectRatio(), 0.4f, 2000.0f );
-    Trans = /*Trackball.GetRotationMatrix() * */LMatrix4::GetTranslateMatrix( LVector3( 0.0f, 0.0f, -5.0f ) );
-    Env->Renderer->GetCanvas()->SetMatrices(Projection, Trans);
+void RenderScene(LMatrix4 Projection, LMatrix4 Trans) {
+	Env->Renderer->GetCanvas()->SetMatrices(Projection, Trans);
 
     /*iShaderProgram* SP = Env->Resources->LoadSP("shader1_1.sp", "");
     SP->BindUniforms();
@@ -248,11 +213,71 @@ void DrawCarousel() {
 //        Env->Renderer->GetCanvas()->TexturedRect3D(p00, p10, p11, p01, NULL, SP, true);
     }       
 
+    //drawRect3D(LVector3(-1.f, 0.f, 0.f), LVector3(-1.f, 10.f, 0.f), LVector3(-1.f, 10.f, 10.f), LVector3(-1.f, 0.f, 10.f), rendState);
+
     Env->Renderer->GetCanvas()->Flush();    
+}
+void DrawCarousel() {   
+    alp = 2 * Math::PI / (3 * n);
+    h = 800.f / 480 * r * sin(alp) * 2;
+    newMousePressedL = Env->Console->IsKeyPressed( LK_LBUTTON );
+    MousePosition = Env->Viewport->GetMousePosition();    
+    if (!MousePressedL && newMousePressedL) {
+        startPos = MousePosition;
+    }
+    if (MousePressedL && !newMousePressedL) {
+        currentXAngle += addXAngle;
+        currentYAngle += addYAngle;
+    }
+    addXAngle = 0;
+    addYAngle = 0;
+
+    if (newMousePressedL) {
+        addXAngle = -asin(MousePosition[0]) + asin(startPos[0]);
+        addYAngle = -asin(MousePosition[1]) + asin(startPos[1]);
+    }
+    ralp = currentYAngle + addYAngle;
+    roalp = currentXAngle + addXAngle;
+    //ralp = 0;
+    //roalp = 0;
+    rotationXY = LMatrix3(LVector3(cos(roalp), -sin(roalp), 0.f), 
+                          LVector3(sin(roalp), cos(roalp),  0.f),
+                          LVector3(0.f,        0.f,         1.f));
+    rotationYZ = LMatrix3(LVector3(1.f, 0.f,       0.f), 
+                          LVector3(0.f, cos(ralp), -sin(ralp)),
+                          LVector3(0.f, sin(ralp), cos(ralp)));
+    rotation = rotationXY * rotationYZ;
+
+    MousePressedL = newMousePressedL;
+
+    Projection = Math::Perspective( 45.0f, Env->Viewport->GetAspectRatio(), 0.4f, 2000.0f );
+    Trans = LMatrix4::GetTranslateMatrix( LVector3( 0.0f, 0.0f, -5.0f ) );
+    Trans1 =  Math::LookAt( getSymm(LVector3( 0.0f, 0.0f, -5.0f ), plane) , getSymm(LVector3( 0.0f, 0.0f, 0.f ), plane),  getSymm(LVector3( 0.0f, 1.f, 0.f ), plane0));
+    
+    if (iRT == NULL) {
+	    iRT = Env->Renderer->CreateRenderTarget( 512, 512, 1, 8, true, 1);
+	}
+    iRT->Bind(0);
+
+    Env->Renderer->GetCanvas()->SetMatrices(Projection, Trans1);
+    RenderScene(Projection, Trans1);        
+    iTexture* tx = iRT->GetColorTexture(0);
+    iRT->UnBind();
+    
+
+    clRenderState* rendState = Env->Resources->LoadShader("shader2_2.sp");
+    rendState->GetShaderProgram()->BindUniforms();
+    rendState->GetShaderProgram()->SetUniformNameMat4Array( "ProjectionMatrix", 1, Projection );
+    rendState->GetShaderProgram()->SetUniformNameMat4Array( "ModelViewMatrix",  1, Trans );
+    rendState->SetTexture(1, tx, false);
+    drawPlaneSquare(plane, rendState);
+    Env->Renderer->GetCanvas()->Flush();
+    RenderScene(Projection, Trans);
 }
 
 void DrawOverlay( LEvent Event, const LEventArgs& Args )
 {
+
     DrawCarousel();
 
     Env->Renderer->GetCanvas()->Flush();

@@ -23,13 +23,16 @@ in vec2 TexCoord;
 
 uniform vec4 u_Color;
 uniform vec4 RectColor;
+uniform sampler2D Texture1;
 uniform sampler2D Texture0;
 out vec4 out_FragColor;
 
 void main()
 {
-	vec4 Color = texture( Texture0, TexCoord );  
-	Color.a = 0.5; 
+	vec4 Color1 = texture( Texture0, TexCoord );
+    vec4 Color2 = texture( Texture1, TexCoord );
+	vec4 Color = (Color1 + 5.0 * Color2) / 6.0;
+	Color.a = 1.0; 
  
    	out_FragColor = Color;
 }
