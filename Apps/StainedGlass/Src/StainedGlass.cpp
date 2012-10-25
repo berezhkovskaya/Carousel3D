@@ -49,6 +49,7 @@ iVertexArray*      iiVA;
 iRenderTarget* iRT;
 clRenderState* rendState;
 clRenderState* rendStateFinal;
+clRenderState* DebugShader;
 
 void drawRect3D_1(LVector3 p00, LVector3 p10, LVector3 p11, LVector3 p01, LVector3 n, clRenderState* State ) {
 	
@@ -248,14 +249,20 @@ void DrawCarousel() {
     MousePressedL = newMousePressedL;
 
     Projection = Math::Perspective( 45.0f, Env->Viewport->GetAspectRatio(), 0.4f, 2000.0f );
+
     Trans = LMatrix4::GetTranslateMatrix( LVector3( 0.0f, 0.0f, -5.0f ) );
-    Trans1 =  Math::LookAt( getSymm(LVector3( 0.0f, 0.0f, -5.0f ), plane) , getSymm(LVector3( 0.0f, 0.0f, 0.f ), plane),  getSymm(LVector3( 0.0f, 1.f, 0.f ), plane0));
+
+	 LPlane Plane( 0, 0, 1, 0 );
+    Trans1 = Plane.Mirror() * Trans;
+
+    //Trans1 =  Math::LookAt( getSymm(LVector3( 0.0f, 0.0f, -5.0f ), plane) , getSymm(LVector3( 0.0f, 0.0f, 0.f ), plane),  getSymm(LVector3( 0.0f, 1.f, 0.f ), plane0));
     
     if (iRT == NULL) {
 	    iRT = Env->Renderer->CreateRenderTarget( 512, 512, 1, 8, true, 1);
 	}
-    iRT->Bind(0);
 
+    iRT->Bind(0);
+    Env->Renderer->ClearRenderTarget( true, true, false );	 
     Env->Renderer->GetCanvas()->SetMatrices(Projection, Trans1);
     RenderScene(Projection, Trans1);        
     iRT->UnBind();
@@ -267,6 +274,9 @@ void DrawCarousel() {
     rendStateFinal->GetShaderProgram()->SetUniformNameMat4Array( "ModelViewMatrix",  1, Trans );
     rendStateFinal->SetTexture(1, tx, false);
     drawPlaneSquare(plane, rendStateFinal);
+
+//	 DebugShader->SetTexture(0, tx, false);
+//    Env->Renderer->GetCanvas()->FullscreenRect( DebugShader );
     Env->Renderer->GetCanvas()->Flush();
 
     RenderScene(Projection, Trans);
@@ -288,8 +298,9 @@ APPLICATION_ENTRY_POINT
 
     Env->Connect( L_EVENT_DRAWOVERLAY, Utils::Bind( &DrawOverlay ) );
 
-	 rendState = Env->Resources->LoadShader("shader3.shader");
+	rendState = Env->Resources->LoadShader("shader3.shader");
     rendStateFinal = Env->Resources->LoadShader("shader2.shader");
+	DebugShader = Env->Resources->LoadShader("debug.shader");
 
     Env->RunApplication( DEFAULT_CONSOLE_AUTOEXEC );
 

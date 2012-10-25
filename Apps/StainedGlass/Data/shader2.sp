@@ -32,7 +32,7 @@ void main()
 {
 	vec4 Color1 = texture( Texture0, TexCoord );
 	vec4 Color2 = texture( Texture1, TexCoord );
-	vec4 Color = (Color1 + 5.0 * Color2) / 6.0;
+	vec4 Color = (Color1 + 0.5 * Color2) / 1.5;
 	Color.a = 1.0; 
 
 	out_FragColor = Color + vec4( 0.1, 0.1, 0.1, 0.0 );
