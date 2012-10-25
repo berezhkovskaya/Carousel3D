@@ -39,6 +39,9 @@ out vec4 out_FragColor;
 void main()
 {
    vec3 n2   = normalize ( n );
-   vec3 l2   = normalize ( l );
-   out_FragColor = vec4(vec3(u_Color * max(dot(n2, l2), 0.0)), 1.0) ;
+   vec3 l2   = -normalize ( l );
+
+	float d = dot(n2, l2);
+
+   out_FragColor = vec4( (u_Color * max(d, 0.0)).xyz, 1.0)  + vec4( 0.5, 0.5, 0.5, 0.0 );
 }
