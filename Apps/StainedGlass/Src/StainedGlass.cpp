@@ -47,6 +47,8 @@ clVertexAttribs*      clVA;
 
 iVertexArray*      iiVA;
 iRenderTarget* iRT;
+clRenderState* rendState;
+clRenderState* rendStateFinal;
 
 void drawRect3D_1(LVector3 p00, LVector3 p10, LVector3 p11, LVector3 p01, LVector3 n, clRenderState* State ) {
 	
@@ -74,16 +76,12 @@ void drawRect3D_1(LVector3 p00, LVector3 p10, LVector3 p11, LVector3 p01, LVecto
 	State->GetShaderProgram()->BindUniforms();	
 	State->GetShaderProgram()->SetUniformNameVec3Array( "u_Normal", 1, n);
 
-
-
 	if (iiVA == NULL) {
 		iiVA = Env->Renderer->AllocateEmptyVA();
+		iiVA->SetVertexAttribs(VA);
 	}
-	iVertexArray* iVA = iiVA;
-
-	iVA->SetVertexAttribs(VA);
-	iVA->CommitChanges();
-	Env->Renderer->AddBuffer( iVA, State, 1, false );
+	iiVA->CommitChanges();
+	Env->Renderer->AddBuffer( iiVA, State, 1, false );
 }
 
 void drawRect3D(LVector3 p00, LVector3 p10, LVector3 p11, LVector3 p01, clRenderState* State ) {
@@ -198,7 +196,6 @@ void RenderScene(LMatrix4 Projection, LMatrix4 Trans) {
 
     Env->Renderer->GetCanvas()->Flush();*/
     //drawAxis();
-    clRenderState* rendState = Env->Resources->LoadShader("shader3_2.sp");
     rendState->GetShaderProgram()->BindUniforms();
     rendState->GetShaderProgram()->SetUniformNameVec3Array( "u_Light", 1, Light);
     rendState->GetShaderProgram()->SetUniformNameMat4Array( "ProjectionMatrix", 1, Projection );
@@ -261,17 +258,17 @@ void DrawCarousel() {
 
     Env->Renderer->GetCanvas()->SetMatrices(Projection, Trans1);
     RenderScene(Projection, Trans1);        
-    iTexture* tx = iRT->GetColorTexture(0);
     iRT->UnBind();
-    
 
-    clRenderState* rendState = Env->Resources->LoadShader("shader2_2.sp");
-    rendState->GetShaderProgram()->BindUniforms();
-    rendState->GetShaderProgram()->SetUniformNameMat4Array( "ProjectionMatrix", 1, Projection );
-    rendState->GetShaderProgram()->SetUniformNameMat4Array( "ModelViewMatrix",  1, Trans );
-    rendState->SetTexture(1, tx, false);
-    drawPlaneSquare(plane, rendState);
+    iTexture* tx = iRT->GetColorTexture(0);
+
+    rendStateFinal->GetShaderProgram()->BindUniforms();
+    rendStateFinal->GetShaderProgram()->SetUniformNameMat4Array( "ProjectionMatrix", 1, Projection );
+    rendStateFinal->GetShaderProgram()->SetUniformNameMat4Array( "ModelViewMatrix",  1, Trans );
+    rendStateFinal->SetTexture(1, tx, false);
+    drawPlaneSquare(plane, rendStateFinal);
     Env->Renderer->GetCanvas()->Flush();
+
     RenderScene(Projection, Trans);
 }
 
@@ -290,6 +287,9 @@ APPLICATION_ENTRY_POINT
     Env->DeployDefaultEnvironment( NULL, "..\\..\\CommonMedia" );
 
     Env->Connect( L_EVENT_DRAWOVERLAY, Utils::Bind( &DrawOverlay ) );
+
+	 rendState = Env->Resources->LoadShader("shader3.shader");
+    rendStateFinal = Env->Resources->LoadShader("shader2.shader");
 
     Env->RunApplication( DEFAULT_CONSOLE_AUTOEXEC );
 
