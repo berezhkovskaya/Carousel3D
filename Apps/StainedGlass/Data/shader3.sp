@@ -40,7 +40,7 @@ out vec4 out_FragColor;
 void main()
 {
    vec3 n2   = normalize ( n );
-   vec3 l2   = -normalize ( l );
+   vec3 l2   = normalize ( l );
 
 	float d = dot(n2, l2);
 

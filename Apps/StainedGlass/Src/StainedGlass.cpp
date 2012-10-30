@@ -35,8 +35,7 @@ float                 ralp;
 float                 roalp;
 float                 startRotYAlp = Math::PI / 3;
 float                 currentYAngle = startRotYAlp;
-LVector4              plane = LVector4(0.f, cos(Math::PI / 2 - startRotYAlp), sin(Math::PI / 2 - startRotYAlp), 1.1f);
-LVector4              plane0 = LVector4(0.f, cos(Math::PI / 2 - startRotYAlp), sin(Math::PI / 2 - startRotYAlp), 0.f);
+LPlane                plane = LPlane(0.f, cos(Math::PI / 2 - startRotYAlp), sin(Math::PI / 2 - startRotYAlp), 1.1f);
 
 //float                 inf = 1.2;
 float                 r = 0.9f;
@@ -93,9 +92,10 @@ void drawRect3D(LVector3 p00, LVector3 p10, LVector3 p11, LVector3 p01, clRender
 	drawRect3D_1(p00 - n * e, p10 - n * e, p11 - n * e, p01 - n * e, -n, State);
 }
 
-LVector3 getSymm(LVector3 p, LVector4 plane) {
-	float dst = LVector4(p, 1.f).Dot(plane);
-	return p - 2 * dst * plane.ToVector3();	
+LVector3 getSymm(LVector3 p, LPlane plane) {
+	/*float dst = LVector4(p, 1.f).Dot(plane);
+	return p - 2 * dst * plane.ToVector3();	*/
+	return plane.Mirror() * p;
 }
 void getVertexes(int i, LVector3& p00, LVector3& p10, LVector3& p11, LVector3& p01) {
     float alpStart  = i * 3 * alp;
@@ -138,19 +138,33 @@ void drawSymmetricAxis() {
     Env->Renderer->GetCanvas()->Line3D(p1, p2, LC_Blue);
 }
 
-void drawPlaneSquare(LVector4 plane, clRenderState* rendState) {
+void drawPlaneSquare(LPlane Plane, clRenderState* rendState) {
+	LVector4 plane = *Plane.ToVec4Ptr();
 	LVector3 n = plane.ToVector3();
 	LVector3 v1 = LVector3(1.f, 0.f, 0.f);
 	LVector3 v2 = n.Cross(v1);
-	float r = 1.f;	
+	n.Normalize();
+	v1.Normalize();
+	v2.Normalize();
+
+	float r = 1.5f;	
 	LVector3 p0 = -n * plane.W;
 
-	p00 = p0 + v1 * r + v2 * r;
-	p01 = p0 + v1 * r - v2 * r;
-	p11 = p0 - v1 * r - v2 * r;
-	p10 = p0 - v1 * r + v2 * r;
+	p00 = p0 - v1 * r - v2 * r;
+	p01 = p0 - v1 * r + v2 * r;
+	p11 = p0 + v1 * r + v2 * r;
+	p10 = p0 + v1 * r - v2 * r;
+	rendState->GetShaderProgram()->BindUniforms();	
+	rendState->GetShaderProgram()->SetUniformNameVec4Array( "u_p00", 1, LVector4(p00, 1.f));
+	rendState->GetShaderProgram()->SetUniformNameVec4Array( "u_p10", 1, LVector4(p10, 1.f));
+	rendState->GetShaderProgram()->SetUniformNameVec4Array( "u_p01", 1, LVector4(p01, 1.f));
 
-	Env->Renderer->GetCanvas()->Rect3DShader(p00, p10, p11, p01, rendState);
+
+
+//	Env->Renderer->GetCanvas()->Rect3DShader(p00, p10, p11, p01, rendState);
+	//n = LVector3((p10 - p00).Cross(p01 - p00)); 
+	
+	drawRect3D_1(p00, p10, p11, p01,  n, rendState);
     Env->Renderer->GetCanvas()->Flush();
 }
 void RenderScene(LMatrix4 Projection, LMatrix4 Trans) {
@@ -252,8 +266,8 @@ void DrawCarousel() {
 
     Trans = LMatrix4::GetTranslateMatrix( LVector3( 0.0f, 0.0f, -5.0f ) );
 
-	 LPlane Plane( 0, 0, 1, 0 );
-    Trans1 = Plane.Mirror() * Trans;
+	// LPlane Plane( 0, 0, 1, 0 );
+    Trans1 = plane.Mirror() * Trans;
 
     //Trans1 =  Math::LookAt( getSymm(LVector3( 0.0f, 0.0f, -5.0f ), plane) , getSymm(LVector3( 0.0f, 0.0f, 0.f ), plane),  getSymm(LVector3( 0.0f, 1.f, 0.f ), plane0));
     
