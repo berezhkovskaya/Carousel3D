@@ -1,17 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
+		<Filter Include="C:\LinderdaumSDK\Src">
+			<UniqueIdentifier>{724db408-214d-4e3c-a411-65a596c4c907}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="C:\LinderdaumSDK\Src/Linderdaum">
+			<UniqueIdentifier>{87215538-3fe0-4db3-88d9-6a558b333412}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="C:\LinderdaumSDK\Src/ExtLibs">
+			<UniqueIdentifier>{b13151d4-4562-4448-b819-618bf02999ca}</UniqueIdentifier>
+		</Filter>
 		<Filter Include="Src">
-			<UniqueIdentifier>{9863c065-5583-4462-9a8a-02bf1dbb43be}</UniqueIdentifier>
+			<UniqueIdentifier>{9e3b2c2a-6d3d-4d3a-b7d0-c8f29192c45a}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Src\com">
-			<UniqueIdentifier>{d0d04491-fb18-4a8f-a005-4b6a12358dda}</UniqueIdentifier>
+			<UniqueIdentifier>{ca22d15b-5a48-41ca-960f-bc4d899eee5c}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Src\com\linderdaum">
-			<UniqueIdentifier>{93613183-cfcc-4166-aa97-5a363e7d2fcf}</UniqueIdentifier>
+			<UniqueIdentifier>{64d19808-68bf-496b-a549-91f6e1c47327}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Src\com\linderdaum\engine">
-			<UniqueIdentifier>{c6767fb3-2829-4981-864a-519bbd3e55e4}</UniqueIdentifier>
+			<UniqueIdentifier>{3b5e4f64-b825-4b8e-8069-e121705bc7a4}</UniqueIdentifier>
 		</Filter>
 	</ItemGroup>
 	<ItemGroup>

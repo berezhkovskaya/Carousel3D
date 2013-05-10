@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC14EDE7-7F3D-5E46-B07A-15DA1C30682D}</ProjectGuid>
+    <RootNamespace>Test_Android</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\LinderdaumSDK\Out\Test_AndroidDebug32\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\LinderdaumSDK\Out\Test_AndroidRelease32\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\LinderdaumSDK\Out\Test_AndroidDebug64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\LinderdaumSDK\Out\Test_AndroidRelease64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommand>$(OutDir)/Test_Android_Win32Debug.exe</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommand>$(OutDir)/Test_Android_Win64Debug.exe</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerCommand>$(OutDir)/Test_Android_Win32Release.exe</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerCommand>$(OutDir)/Test_Android_Win64Release.exe</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP /J %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>C:\LinderdaumSDK\Src;.\Src\;C:\LinderdaumSDK\Src\Linderdaum;.\Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/fixed:no %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>LinderdaumEngine.lib;user32.lib;gdi32.lib;Vfw32.lib;ole32.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)/Test_Android_Win32Debug.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\LinderdaumSDK\Libs.Win32;C:\LinderdaumSDK\Out\Debug32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)Test_Android.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP /J %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>C:\LinderdaumSDK\Src;.\Src\;C:\LinderdaumSDK\Src\Linderdaum;.\Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>LinderdaumEngine.lib;user32.lib;gdi32.lib;Vfw32.lib;ole32.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)/Test_Android_Win32Release.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\LinderdaumSDK\Libs.Win32;C:\LinderdaumSDK\Out\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP /J %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>C:\LinderdaumSDK\Src;.\Src\;C:\LinderdaumSDK\Src\Linderdaum;.\Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/fixed:no %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>LinderdaumEngine.lib;user32.lib;gdi32.lib;Vfw32.lib;ole32.lib;fmodex64_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)/Test_Android_Win64Debug.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\LinderdaumSDK\Libs.Win64;C:\LinderdaumSDK\Out\Debug64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)Test_Android.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP /J %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>C:\LinderdaumSDK\Src;.\Src\;C:\LinderdaumSDK\Src\Linderdaum;.\Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>LinderdaumEngine.lib;user32.lib;gdi32.lib;Vfw32.lib;ole32.lib;fmodex64_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)/Test_Android_Win64Release.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\LinderdaumSDK\Libs.Win64;C:\LinderdaumSDK\Out\Release64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>	<ItemGroup>
+		<ClCompile Include= "Src\Generated\Exports\Exports_Core.cpp" />
+		<ClCompile Include= "Src\Generated\Exports\ExpReg_Core1.cpp" />
+		<ClCompile Include= "Src\Generated\Exports\ExpReg_Core2.cpp" />
+		<ClCompile Include= "Src\Generated\Exports\ExpReg_Core3.cpp" />
+		<ClCompile Include= "Src\Generated\Exports\ExpReg_Core4.cpp" />
+		<ClCompile Include= "Src\Generated\Exports\ExpReg_Core5.cpp" />
+		<ClCompile Include= "Src\Generated\Exports\ExpReg_Core6.cpp" />
+		<ClCompile Include= "Src\Generated\Exports\ExpReg_Core7.cpp" />
+		<ClCompile Include= "Src\Generated\Globals\ColorRegistration.cpp" />
+		<ClCompile Include= "Src\Generated\Globals\KeySymbolsRegistration.cpp" />
+		<ClCompile Include= "Src\Generated\Globals\LColors.cpp" />
+		<ClCompile Include= "Src\Generated\LAL\LAL.cpp" />
+		<ClCompile Include= "Src\Generated\LCL\LCL.cpp" />
+		<ClCompile Include= "Src\Generated\LGL\LGL.cpp" />
+		<ClCompile Include= "Src\Generated\LGL\LGLTracer.cpp" />
+		<ClCompile Include= "Src\Generated\Serialization\Serialization_LinderdaumCore.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Audio\Audio.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Audio\Audio_FMOD.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Audio\Audio_OpenAL.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Audio\MOD.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Audio\OGG.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\Console.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\CVars.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\iObject.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\Linker.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\Logger.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\RTTI\Field.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\RTTI\iStaticClass.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\RTTI\Property.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\RTTI\State.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\Script.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\ScriptCompiler.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\UUID.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\VFS\Archive.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\VFS\Files.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\VFS\FileSystem.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\VFS\libcompress.c" />
+		<ClCompile Include= "Src\Linderdaum\Core\VFS\ML.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\VFS\MountPoint.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Core\VFS\pugixml.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Environment.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Geometry\Animation.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Geometry\ASE.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Geometry\Geom.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Geometry\GeomServ.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Geometry\Joints.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Geometry\LCM.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Geometry\MD5.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Geometry\Mesh.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Geometry\Surfaces.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Geometry\VAMender.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Geometry\VertexAttribs.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_BorderPanel.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_Bubbles.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_Button.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_Checkable.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_CheckBox.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_ColorDial.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_DialogWindow.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_FSGraph.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_Gauge.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_InputLine.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_ListBox.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_Memo.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_MtxView.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_Page.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_Panel.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_PushButton.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_RadioButton.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_RadioGroup.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_SceneView.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_Scroller.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_Sidebar.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_Slider.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_Splitters.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_StaticRect.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_StaticWidget.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_StdConsole.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_TabControl.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_TransitionPage.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\ComCtl\I_Window.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\FlowUI.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\GUIDesktop.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\GUIManager.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\iGUIRegion.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\iGUIResponder.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\iGUIView.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\Transitions\I_CrossFade.cpp" />
+		<ClCompile Include= "Src\Linderdaum\GUI\Transitions\I_Slide.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Images\Bitmap.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Images\FI_Utils.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Images\Guillotine.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Images\Image.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Images\ImageCache.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Images\ImageList.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Images\ImgLoad.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Images\RAW.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Images\TextRenderer.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Images\VolumeLib.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Input\Gestures.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Input\Gestures2.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Input\Input.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Input\NetDevices.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Input\OSInput.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Input\ScreenJoystick.cpp" />
+		<ClCompile Include= "Src\Linderdaum\LString.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\Collision.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LAABB.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LBox.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LCurve.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LFFT.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LFrustum.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LGeomUtils.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LGraph.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LMathStrings.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LMatrix.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LOBB.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LPoly.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LProjection.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LRandom.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LSphere.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LTransform.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Math\LVector.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Network\HTTP.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Network\Network.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Physics\BodyControllers.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Physics\BoxLite.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Physics\BoxScene.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Physics\Collider.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Physics\CollisionIntervals.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Physics\CollisionShape.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Physics\Control.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Physics\RigidBody.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Physics\SimplePhysics.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\Canvas.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\CL\CLContext.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\DX11\DX11RenderContext.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\GL\GLAPIContainer.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\GL\GLBuffer.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\GL\GLDebug.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\GL\GLFrameBuffer.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\GL\GLQuery.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\GL\GLRenderContext.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\GL\GLSL.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\GL\GLTexture.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\GL\GLVertexArray.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\iRenderContext.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\iShaderProgram.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\iTexture.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\iVertexArray.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\RenderState.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\Soft\SoftFrameBuffer.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\Soft\SoftRenderContext.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Renderer\VolumeRenderer.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Resources\iResource.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Resources\ResourcesManager.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Resources\VFW.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\CSM.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\GameCamera.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Heightmaps\HeightMapFacetter.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Heightmaps\LHeightMap.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\iUpdater.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\LVLib.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Material.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Particles\GPUParticles.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Particles\ParticleSystem.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Postprocess\ASSAO.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Postprocess\FeedbackScreen.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Postprocess\Filter.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Postprocess\HDRPP.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Postprocess\iPostprocessor.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Postprocess\MLAA.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Postprocess\RenderingTechnique.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Scene.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Scene\Terrain\Terrain.cpp" />
+		<ClCompile Include= "Src\Linderdaum\SysEnv.cpp" />
+		<ClCompile Include= "Src\Linderdaum\UnitTests\Tests.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Utils\DateTime.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Utils\Event.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Utils\Exceptions.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Utils\LArray.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Utils\Library.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Utils\Localizer.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Utils\Screen.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Utils\Thread.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Utils\Utils.cpp" />
+		<ClCompile Include= "Src\Linderdaum\Utils\Viewport.cpp" />
+		<ClCompile Include= "Src\Linderdaum\VisualScene\CameraPositioner.cpp" />
+		<ClCompile Include= "Src\Linderdaum\VisualScene\Edit.cpp" />
+		<ClCompile Include= "Src\Linderdaum\VisualScene\Gizmos.cpp" />
+		<ClCompile Include= "Src\Linderdaum\VisualScene\Prefab.cpp" />
+		<ClCompile Include= "Src\Linderdaum\VisualScene\Trajectory.cpp" />
+		<ClCompile Include= "Src\Linderdaum\VisualScene\VisualCamera.cpp" />
+		<ClCompile Include= "Src\Linderdaum\VisualScene\VisualGraph.cpp" />
+		<ClCompile Include= "Src\Linderdaum\VisualScene\VisualObject.cpp" />
+		<ClCompile Include= "Src\Linderdaum\VisualScene\VisualProjector.cpp" />
+		<ClCompile Include= "Src\Linderdaum\VisualScene\VisualRenderables.cpp" />
+		<ClCompile Include= "Src\Linderdaum\VisualScene\VisualScene.cpp" />
+		<ClCompile Include= "Src\Linderdaum\World\AI\Behaviour.cpp" />
+		<ClCompile Include= "Src\Linderdaum\World\AI\Pathfinder.cpp" />
+		<ClCompile Include= "Src\Linderdaum\World\Entity.cpp" />
+		<ClCompile Include= "Src\Linderdaum\World\HighScores.cpp" />
+		<ClCompile Include= "Src\Linderdaum\World\iActor.cpp" />
+		<ClCompile Include= "Src\Linderdaum\World\World.cpp" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include= "Src\ExtLibs\CL\cl.h" />
+		<ClInclude Include= "Src\ExtLibs\CL\cl_d3d10.h" />
+		<ClInclude Include= "Src\ExtLibs\CL\cl_ext.h" />
+		<ClInclude Include= "Src\ExtLibs\CL\cl_gl.h" />
+		<ClInclude Include= "Src\ExtLibs\CL\cl_gl_ext.h" />
+		<ClInclude Include= "Src\ExtLibs\CL\cl_platform.h" />
+		<ClInclude Include= "Src\ExtLibs\CL\opencl.h" />
+		<ClInclude Include= "Src\ExtLibs\DInput\dinput.h" />
+		<ClInclude Include= "Src\ExtLibs\FMOD\fmod.h" />
+		<ClInclude Include= "Src\ExtLibs\FMOD\fmod.hpp" />
+		<ClInclude Include= "Src\ExtLibs\FMOD\fmod_codec.h" />
+		<ClInclude Include= "Src\ExtLibs\FMOD\fmod_dsp.h" />
+		<ClInclude Include= "Src\ExtLibs\FMOD\fmod_errors.h" />
+		<ClInclude Include= "Src\ExtLibs\FMOD\fmod_memoryinfo.h" />
+		<ClInclude Include= "Src\ExtLibs\FMOD\fmod_output.h" />
+		<ClInclude Include= "Src\ExtLibs\GL\gl3.h" />
+		<ClInclude Include= "Src\ExtLibs\GL\glxext.h" />
+		<ClInclude Include= "Src\ExtLibs\GL\wglext.h" />
+		<ClInclude Include= "Src\ExtLibs\half.h" />
+		<ClInclude Include= "Src\ExtLibs\micropather.h" />
+		<ClInclude Include= "Src\ExtLibs\ModPlug\modplug.h" />
+		<ClInclude Include= "Src\ExtLibs\OpenAL\al.h" />
+		<ClInclude Include= "Src\ExtLibs\OpenAL\alc.h" />
+		<ClInclude Include= "Src\ExtLibs\OpenAL\alctypes.h" />
+		<ClInclude Include= "Src\ExtLibs\OpenAL\altypes.h" />
+		<ClInclude Include= "Src\ExtLibs\OpenAL\alut.h" />
+		<ClInclude Include= "Src\ExtLibs\RSC\compiler_funcs.h" />
+		<ClInclude Include= "Src\ExtLibs\RSC\compiler_log_interface.h" />
+		<ClInclude Include= "Src\ExtLibs\RSC\compiler_types.h" />
+		<ClInclude Include= "Src\ExtLibs\RSC\interface_defs.h" />
+		<ClInclude Include= "Src\ExtLibs\RSC\sys_interface.h" />
+		<ClInclude Include= "Src\ExtLibs\Vorbis\codec.h" />
+		<ClInclude Include= "Src\ExtLibs\Vorbis\link_funcs.h" />
+		<ClInclude Include= "Src\ExtLibs\Vorbis\ogg\config_types.h" />
+		<ClInclude Include= "Src\ExtLibs\Vorbis\ogg\ogg.h" />
+		<ClInclude Include= "Src\ExtLibs\Vorbis\ogg\os_types.h" />
+		<ClInclude Include= "Src\ExtLibs\Vorbis\vorbisfile.h" />
+		<ClInclude Include= "Src\Generated\AsyncCapsule.h" />
+		<ClInclude Include= "Src\Generated\CoreExport_Includes.h" />
+		<ClInclude Include= "Src\Generated\CoreSerialization_Defs.h" />
+		<ClInclude Include= "Src\Generated\Exports\clBehaviour_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clCompositeBehaviour_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clEntity_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clFilterPostprocessor_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clFlingHandler2_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clFlingHandler_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clGestureHandler_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clGUITransitionPage_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clGUIWindow_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clHighScores_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clParallel_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clPinchZoomHandler_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clSelector_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clSequence_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clTestClient_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\clValidator_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\Exports_Core.h" />
+		<ClInclude Include= "Src\Generated\Exports\iActor_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\iApplet_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\iCameraPositioner_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\iKernel2D_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\iObject_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\iPlacementConstraint_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\iPostprocessor_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\iQuery_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\iStringsApplet_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\iTestApplet_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\iUpdater_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Exports\RigidBodyController_Tunneller.h" />
+		<ClInclude Include= "Src\Generated\Functors.h" />
+		<ClInclude Include= "Src\Generated\Globals\ColorRegistration.h" />
+		<ClInclude Include= "Src\Generated\Globals\KeySymbolsRegistration.h" />
+		<ClInclude Include= "Src\Generated\LAL\LAL.h" />
+		<ClInclude Include= "Src\Generated\LCL\LCL.h" />
+		<ClInclude Include= "Src\Generated\LGL\LGL.h" />
+		<ClInclude Include= "Src\Generated\LGL\LGLAPI.h" />
+		<ClInclude Include= "Src\Generated\LGL\LGLTracer.h" />
+		<ClInclude Include= "Src\Generated\MethodBind.h" />
+		<ClInclude Include= "Src\Generated\VM\ExecThread_MtdArray.h" />
+		<ClInclude Include= "Src\Generated\VM\ExecThread_MtdList.h" />
+		<ClInclude Include= "Src\Generated\VM\LOpCodes.h" />
+		<ClInclude Include= "Src\Linderdaum\Audio\Audio.h" />
+		<ClInclude Include= "Src\Linderdaum\Audio\Audio_FMOD.h" />
+		<ClInclude Include= "Src\Linderdaum\Audio\Audio_OpenAL.h" />
+		<ClInclude Include= "Src\Linderdaum\Audio\MOD.h" />
+		<ClInclude Include= "Src\Linderdaum\Audio\OGG.h" />
+		<ClInclude Include= "Src\Linderdaum\Audio\WAV.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\Console.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\CVars.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\iIntrusivePtr.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\iObject.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\Linker.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\Logger.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\RTTI\Field.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\RTTI\FieldBinding.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\RTTI\iStaticClass.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\RTTI\Method.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\RTTI\Parameters.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\RTTI\Property.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\RTTI\PropertyMacros.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\RTTI\State.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\RTTI\Symbol.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\Script.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\ScriptCompiler.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\UUID.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\VFS\Archive.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\VFS\Files.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\VFS\FileSystem.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\VFS\iIStream.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\VFS\iOStream.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\VFS\libcompress.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\VFS\ML.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\VFS\MountPoint.h" />
+		<ClInclude Include= "Src\Linderdaum\Core\VFS\pugixml.hpp" />
+		<ClInclude Include= "Src\Linderdaum\Engine.h" />
+		<ClInclude Include= "Src\Linderdaum\Environment.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\Animation.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\AnimSequence.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\ASE.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\AttribStream.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\Geom.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\GeomServ.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\Joints.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\LCM.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\MD5.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\Mesh.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\Surfaces.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\VAMender.h" />
+		<ClInclude Include= "Src\Linderdaum\Geometry\VertexAttribs.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_BorderPanel.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_Bubbles.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_Button.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_Checkable.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_CheckBox.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_ColorDial.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_DialogWindow.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_FSGraph.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_Gauge.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_InputLine.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_ListBox.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_Memo.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_MtxView.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_Page.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_Panel.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_PushButton.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_RadioButton.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_RadioGroup.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_SceneView.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_Scroller.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_Sidebar.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_Slider.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_Splitters.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_StaticRect.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_StaticWidget.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_StdConsole.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_TabControl.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_TransitionPage.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\ComCtl\I_Window.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\FlowUI.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\GUIDesktop.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\GUIManager.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\iGUIRegion.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\iGUIResponder.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\iGUIView.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\iValidators.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\Transitions\I_CrossFade.h" />
+		<ClInclude Include= "Src\Linderdaum\GUI\Transitions\I_Slide.h" />
+		<ClInclude Include= "Src\Linderdaum\Images\Bitmap.h" />
+		<ClInclude Include= "Src\Linderdaum\Images\FI_SaveLoadFlags.h" />
+		<ClInclude Include= "Src\Linderdaum\Images\FI_Utils.h" />
+		<ClInclude Include= "Src\Linderdaum\Images\ft.h" />
+		<ClInclude Include= "Src\Linderdaum\Images\Guillotine.h" />
+		<ClInclude Include= "Src\Linderdaum\Images\Image.h" />
+		<ClInclude Include= "Src\Linderdaum\Images\ImageCache.h" />
+		<ClInclude Include= "Src\Linderdaum\Images\ImageList.h" />
+		<ClInclude Include= "Src\Linderdaum\Images\ImgLoad.h" />
+		<ClInclude Include= "Src\Linderdaum\Images\RAW.h" />
+		<ClInclude Include= "Src\Linderdaum\Images\TextRenderer.h" />
+		<ClInclude Include= "Src\Linderdaum\Images\VolumeLib.h" />
+		<ClInclude Include= "Src\Linderdaum\Input\FlowSelector.h" />
+		<ClInclude Include= "Src\Linderdaum\Input\Gestures.h" />
+		<ClInclude Include= "Src\Linderdaum\Input\Gestures2.h" />
+		<ClInclude Include= "Src\Linderdaum\Input\Input.h" />
+		<ClInclude Include= "Src\Linderdaum\Input\NetDevices.h" />
+		<ClInclude Include= "Src\Linderdaum\Input\OSInput.h" />
+		<ClInclude Include= "Src\Linderdaum\Input\ScreenJoystick.h" />
+		<ClInclude Include= "Src\Linderdaum\LColors.h" />
+		<ClInclude Include= "Src\Linderdaum\LKeys.h" />
+		<ClInclude Include= "Src\Linderdaum\LString.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\Collision.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LAABB.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LBlending.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LBox.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LCurve.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LFFT.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LFrustum.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LGears.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LGeomUtils.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LGraph.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LHash.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LHistogram.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LHull.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LKeyframer.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LLine.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LMath.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LMathStrings.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LMatrix.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LOBB.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LPlane.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LPoly.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LProjection.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LQuaternion.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LRandom.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LRect.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LSize.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LSort.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LSphere.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LTransform.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\LVector.h" />
+		<ClInclude Include= "Src\Linderdaum\Math\Trackball.h" />
+		<ClInclude Include= "Src\Linderdaum\Network\HTTP.h" />
+		<ClInclude Include= "Src\Linderdaum\Network\Network.h" />
+		<ClInclude Include= "Src\Linderdaum\Physics\BodyControllers.h" />
+		<ClInclude Include= "Src\Linderdaum\Physics\BoxLite.h" />
+		<ClInclude Include= "Src\Linderdaum\Physics\BoxScene.h" />
+		<ClInclude Include= "Src\Linderdaum\Physics\Collider.h" />
+		<ClInclude Include= "Src\Linderdaum\Physics\CollisionIntervals.h" />
+		<ClInclude Include= "Src\Linderdaum\Physics\CollisionShape.h" />
+		<ClInclude Include= "Src\Linderdaum\Physics\Control.h" />
+		<ClInclude Include= "Src\Linderdaum\Physics\RigidBody.h" />
+		<ClInclude Include= "Src\Linderdaum\Physics\SimplePhysics.h" />
+		<ClInclude Include= "Src\Linderdaum\Platform.h" />
+		<ClInclude Include= "Src\Linderdaum\ProjectSetup.h" />
+		<ClInclude Include= "Src\Linderdaum\Protection.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\Canvas.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\CL\CLContext.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\DX11\DX11RenderContext.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\GL\GLAPIContainer.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\GL\GLBuffer.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\GL\GLDebug.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\GL\GLFrameBuffer.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\GL\GLQuery.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\GL\GLRenderContext.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\GL\GLSL.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\GL\GLTexture.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\GL\GLVertexArray.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\iGPGPUContext.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\iGPUBuffer.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\iQuery.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\iRenderContext.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\iRenderTarget.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\iShaderProgram.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\iTexture.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\iVertexArray.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\RenderState.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\Soft\SoftFrameBuffer.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\Soft\SoftRenderContext.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\Soft\SoftShaderProgram.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\Soft\SoftTexture.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\Soft\SoftVertexArray.h" />
+		<ClInclude Include= "Src\Linderdaum\Renderer\VolumeRenderer.h" />
+		<ClInclude Include= "Src\Linderdaum\Resources\iResource.h" />
+		<ClInclude Include= "Src\Linderdaum\Resources\iVideoDecoder.h" />
+		<ClInclude Include= "Src\Linderdaum\Resources\iVideoEncoder.h" />
+		<ClInclude Include= "Src\Linderdaum\Resources\ResourcesManager.h" />
+		<ClInclude Include= "Src\Linderdaum\Resources\VFW.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\CSM.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\GameCamera.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Heightmaps\HeightDataProvider.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Heightmaps\HeightMapFacetter.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Heightmaps\LHeightMap.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\iUpdater.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\LVLib.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Material.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Particles\GPUParticles.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Particles\ParticleSystem.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Postprocess\ASSAO.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Postprocess\FeedbackScreen.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Postprocess\Filter.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Postprocess\HDRPP.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Postprocess\iPostprocessor.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Postprocess\MLAA.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Postprocess\RenderingTechnique.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Scene.h" />
+		<ClInclude Include= "Src\Linderdaum\Scene\Terrain\Terrain.h" />
+		<ClInclude Include= "Src\Linderdaum\SysEnv.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Classes_Test_8.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Classes_Test_9.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Test_1.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Test_10.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Test_11.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Test_12.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Test_2.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Test_3.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Test_4.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Test_5.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Test_6.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Test_7.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Test_8.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests\Test_9.h" />
+		<ClInclude Include= "Src\Linderdaum\UnitTests\Tests.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\DateTime.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\Event.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\Exceptions.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\iStack.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\L2DBitArray.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\LArray.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\LBlob.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\Library.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\LJNI.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\Localizer.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\LPool.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\LURL.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\Mutex.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\PlatformGCC.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\PlatformMSVC.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\Screen.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\Thread.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\TypeLists.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\TypeTraits.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\Utils.h" />
+		<ClInclude Include= "Src\Linderdaum\Utils\Viewport.h" />
+		<ClInclude Include= "Src\Linderdaum\VisualScene\CameraPositioner.h" />
+		<ClInclude Include= "Src\Linderdaum\VisualScene\Edit.h" />
+		<ClInclude Include= "Src\Linderdaum\VisualScene\Gizmos.h" />
+		<ClInclude Include= "Src\Linderdaum\VisualScene\Prefab.h" />
+		<ClInclude Include= "Src\Linderdaum\VisualScene\Trajectory.h" />
+		<ClInclude Include= "Src\Linderdaum\VisualScene\VisualCamera.h" />
+		<ClInclude Include= "Src\Linderdaum\VisualScene\VisualGraph.h" />
+		<ClInclude Include= "Src\Linderdaum\VisualScene\VisualModifier.h" />
+		<ClInclude Include= "Src\Linderdaum\VisualScene\VisualObject.h" />
+		<ClInclude Include= "Src\Linderdaum\VisualScene\VisualProjector.h" />
+		<ClInclude Include= "Src\Linderdaum\VisualScene\VisualRenderables.h" />
+		<ClInclude Include= "Src\Linderdaum\VisualScene\VisualScene.h" />
+		<ClInclude Include= "Src\Linderdaum\World\AI\2DUniformGrid.h" />
+		<ClInclude Include= "Src\Linderdaum\World\AI\Behaviour.h" />
+		<ClInclude Include= "Src\Linderdaum\World\AI\Pathfinder.h" />
+		<ClInclude Include= "Src\Linderdaum\World\Entity.h" />
+		<ClInclude Include= "Src\Linderdaum\World\HighScores.h" />
+		<ClInclude Include= "Src\Linderdaum\World\iActor.h" />
+		<ClInclude Include= "Src\Linderdaum\World\World.h" />
+		<ClInclude Include= "Src\Linderdaum.h" />
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+	</ImportGroup>
+</Project>

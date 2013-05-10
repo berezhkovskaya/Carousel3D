@@ -1,0 +1,71 @@
+Box2DBody                                                                                              
+Box2DJoint                                                                                             
+LAxisList                                                                                              
+LCollisionShape                                                                                        
+LEulerAngleSystem      LStr::AngleSystemToStr      LStr::StrToAngleSystem                              
+LInterval                                                                                              
+LMatrix3               LStr::Mat3ToStr             LStr::StrToMtx3                                     
+LMatrix4               LStr::Mat4ToStr             LStr::StrToMtx4                                     
+LProjectionType        LStr::ProjectionTypeToStr   LStr::StrToProjectionType                           
+LQuaternion            LStr::QuatToStr             LStr::StrToQuat                                     
+LString                                                                                                
+LStringBuffer          LStr::StringFromBuffer      LStr::BufferFromString                              
+LTransform             LStr::TransformToStr        LStr::StrToTransform                                
+LVector2               LStr::Vec2ToStr             LStr::StrToVec2                                     
+LVector3               LStr::Vec3ToStr             LStr::StrToVec3                                     
+LVector4               LStr::Vec4ToStr             LStr::StrToVec4                                     
+Ldouble                LStr::ToStrEpsilon          LStr::ToDouble              LStr::IsCorrectDouble   
+Lfloat                 LStr::ToStrEpsilon          LStr::ToFloat               LStr::IsCorrectDouble   
+Lint                   LStr::ToStr                 LStr::ToInt                 LStr::IsCorrectInt      
+Lint64                 LStr::ToStr                 LStr::ToInt64               LStr::IsCorrectInt      
+Luint                  LStr::ToStr                 LStr::ToInt                 LStr::IsCorrectInt      
+Luint64                LStr::ToStr                 LStr::ToInt64u              LStr::IsCorrectInt      
+bool                   LStr::ToStr_Bool            LStr::ToBool                LStr::IsCorrectBool     
+clBehaviour                                                                                            
+clBitmapAxis                                                                                           
+clBitmapButton                                                                                         
+clCodePatch                                                                                            
+clConsole                                                                                              
+clFileSystem                                                                                           
+clGUIManager                                                                                           
+clGraph                                                                                                
+clLinker                                                                                               
+clLogger                                                                                               
+clRenderState                                                                                          
+clResourcesManager                                                                                     
+clRigidBody                                                                                            
+clScriptedParam                                                                                        
+clState                                                                                                
+clTrajectoryNode                                                                                       
+clUVSurfaceGenerator                                                                                   
+clViewport                                                                                             
+clVisualCamera                                                                                         
+clVisualLight                                                                                          
+clVisualModifier                                                                                       
+clVisualParticles                                                                                      
+clVisualRenderable                                                                                     
+clVisualVolume                                                                                         
+double                 LStr::ToStrEpsilon          LStr::ToDouble              LStr::IsCorrectDouble   
+float                  LStr::ToStrEpsilon          LStr::ToFloat               LStr::IsCorrectDouble   
+iActor                                                                                                 
+iAudioSubSystem                                                                                        
+iCameraPositioner                                                                                      
+iField                                                                                                 
+iFontProperties                                                                                        
+iGUIView                                                                                               
+iInputDeviceList                                                                                       
+iMethod                                                                                                
+iObject                                                                                                
+iPostprocessor                                                                                         
+iRenderContext                                                                                         
+iRenderTarget                                                                                          
+int                    LStr::ToStr                 LStr::ToInt                 LStr::IsCorrectInt      
+mat3                   LStr::Mat3ToStr             LStr::StrToMtx3                                     
+mat4                   LStr::Mat4ToStr             LStr::StrToMtx4                                     
+mtx3                   LStr::Mat3ToStr             LStr::StrToMtx3                                     
+mtx4                   LStr::Mat4ToStr             LStr::StrToMtx4                                     
+quat                   LStr::QuatToStr             LStr::StrToQuat                                     
+string                                                                                                 
+vec2                   LStr::Vec2ToStr             LStr::StrToVec2                                     
+vec3                   LStr::Vec3ToStr             LStr::StrToVec3                                     
+vec4                   LStr::Vec4ToStr             LStr::StrToVec4                                     

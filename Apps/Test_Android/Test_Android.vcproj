@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9,00"
-   Name="StainedGlass"
-   ProjectGUID="{99031CA9-5734-5F49-A35F-32ADF97AB8E5}"
-   RootNamespace="StainedGlass"
+   Name="Test_Android"
+   ProjectGUID="{FC14EDE7-7F3D-5E46-B07A-15DA1C30682D}"
+   RootNamespace="Test_Android"
    Keyword="Win32Proj"
    >
    <Platforms>
@@ -21,7 +21,7 @@
       <Configuration
          Name="Debug|Win32"
          OutputDirectory=".\"
-         IntermediateDirectory="C:\LinderdaumSDK\Out\StainedGlassDebug32"
+         IntermediateDirectory="C:\LinderdaumSDK\Out\Test_AndroidDebug32"
          ConfigurationType="1"
          InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
          UseOfMFC="0"
@@ -80,11 +80,11 @@
             Name="VCLinkerTool"
             AdditionalOptions="/fixed:no"
             AdditionalDependencies="LinderdaumEngine.lib  user32.lib gdi32.lib Vfw32.lib ole32.lib fmodex_vc.lib"
-            OutputFile="$(OutDir)/StainedGlass_Win32Debug.exe"
+            OutputFile="$(OutDir)/Test_Android_Win32Debug.exe"
             LinkIncremental="2"
             AdditionalLibraryDirectories="C:\LinderdaumSDK\Libs.Win32;C:\LinderdaumSDK\Out\Debug32"
             GenerateDebugInformation="true"
-            ProgramDatabaseFile="$(OutDir)/StainedGlass.pdb"
+            ProgramDatabaseFile="$(OutDir)/Test_Android.pdb"
             SubSystem="1"
             TargetMachine="1"
          />
@@ -116,7 +116,7 @@
       <Configuration
          Name="Release|Win32"
          OutputDirectory=".\"
-         IntermediateDirectory="C:\LinderdaumSDK\Out\StainedGlassRelease32"
+         IntermediateDirectory="C:\LinderdaumSDK\Out\Test_AndroidRelease32"
          ConfigurationType="1"
          InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
          CharacterSet="2"
@@ -169,7 +169,7 @@
          <Tool
             Name="VCLinkerTool"
             AdditionalDependencies="LinderdaumEngine.lib  user32.lib gdi32.lib Vfw32.lib ole32.lib  fmodex_vc.lib"
-            OutputFile="$(OutDir)/StainedGlass_Win32Release.exe"
+            OutputFile="$(OutDir)/Test_Android_Win32Release.exe"
             LinkIncremental="1"
             AdditionalLibraryDirectories="C:\LinderdaumSDK\Libs.Win32;C:\LinderdaumSDK\Out\Release32"
             GenerateDebugInformation="true"
@@ -206,7 +206,7 @@
 		<Configuration
 			Name="Debug|x64"
 			OutputDirectory=".\"
-			IntermediateDirectory="C:\LinderdaumSDK\Out\StainedGlassDebug64"
+			IntermediateDirectory="C:\LinderdaumSDK\Out\Test_AndroidDebug64"
 			ConfigurationType="1"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
@@ -266,11 +266,11 @@
 				Name="VCLinkerTool"
 				AdditionalOptions="/fixed:no"
 				AdditionalDependencies="LinderdaumEngine.lib  user32.lib gdi32.lib Vfw32.lib ole32.lib  fmodex64_vc.lib"
-				OutputFile="$(OutDir)/StainedGlass_Win64Debug.exe"
+				OutputFile="$(OutDir)/Test_Android_Win64Debug.exe"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="C:\LinderdaumSDK\Libs.Win64;C:\LinderdaumSDK\Out\Debug64"
 				GenerateDebugInformation="true"
-				ProgramDatabaseFile="$(OutDir)/StainedGlass.pdb"
+				ProgramDatabaseFile="$(OutDir)/Test_Android.pdb"
 				SubSystem="1"
 				TargetMachine="17"
 			/>
@@ -299,7 +299,7 @@
 		<Configuration
 			Name="Release|x64"
 			OutputDirectory=".\"
-			IntermediateDirectory="C:\LinderdaumSDK\Out\StainedGlassRelease64"
+			IntermediateDirectory="C:\LinderdaumSDK\Out\Test_AndroidRelease64"
 			ConfigurationType="1"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			CharacterSet="2"
@@ -353,7 +353,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="LinderdaumEngine.lib  user32.lib gdi32.lib Vfw32.lib ole32.lib  fmodex64_vc.lib"
-				OutputFile="$(OutDir)/StainedGlass_Win64Release.exe"
+				OutputFile="$(OutDir)/Test_Android_Win64Release.exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="C:\LinderdaumSDK\Libs.Win64;C:\LinderdaumSDK\Out\Release64"
 				GenerateDebugInformation="true"
@@ -390,24 +390,9 @@
 	<Files>
 		<Filter
 			Name="Source Files"
-			UniqueIdentifier="{99031CA9-5734-5F49-A35F-32ADF97AB8E5}">
-			<Filter
-				Name = "com"
-				Filter = "">
-				<Filter
-					Name = "linderdaum"
-					Filter = "">
-					<Filter
-						Name = "engine"
-						Filter = "">
-						<File
-							RelativePath=".\Src\com\linderdaum\engine\StainedGlassActivity.java">
-						</File>
-					</Filter>
-				</Filter>
-			</Filter>
+			UniqueIdentifier="{FC14EDE7-7F3D-5E46-B07A-15DA1C30682D}">
 			<File
-				RelativePath=".\Src\StainedGlass.cpp">
+				RelativePath=".\Src\Test_Android.cpp">
 			</File>
 		</Filter>
 	</Files>

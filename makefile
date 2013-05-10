@@ -7,11 +7,13 @@ AR = ar
 
 CFLAGS = 
 
-OBJDIR = Out/Obj
+OBJDIR = Obj
 
 # Include directories
 INCLUDE_DIRS = -I . \
-	-I Src \
+	-I C:/LinderdaumSDK/Src \
+	-I C:/LinderdaumSDK/Src/Linderdaum \
+	-I C:/LinderdaumSDK/Src/ExtLibs \
 	-I Src \
 	-I Src/ExtLibs \
 	-I Src/ExtLibs/CL \
@@ -890,22 +892,24 @@ $(OBJDIR)/World.o: Src/Linderdaum/World/World.cpp Src/Linderdaum/World/World.h
 
 # User-defined targets
 
-USEDLIBS    = -lgdi32 -lstdc++ -lmsvfw32
+USEDLIBS = -lgdi32 -lstdc++ -lmsvfw32
 
-# for 32-bit only
-# CFLAGS = -m32 -fomit-frame-pointer -msse3 -fpermissive -O2 -s -I Src/ExtLibs
+# CFLAGS = -m32 -fomit-frame-pointer -fpermissive -msse3 -s -O2
 
 # Let's check if this is a faster at compile time
-CFLAGS = -m32 -fomit-frame-pointer -fpermissive -I Src/ExtLibs
-
+CFLAGS = -m32 -fomit-frame-pointer -fpermissive
 
 ####################
 # Targets
 ####################
 
-all: $(OBJS)
+GAMEA: $(OBJS)
+	rm -f Obj/Game.a
+	ar -ru Obj/Game.a $(OBJS)
+
+all: $(OBJS) GAMEA
 #$(OBJS)
-	rm -f Out/Obj/libLinderdaumEngine.a
-	ar -ru Out/Obj/libLinderdaumEngine.a $(OBJS)
+	$(CC) $(COPTS) $(CFLAGS) -o Test_Android.exe Src/Test_Android.cpp Obj/Game.a C:/LinderdaumSDK/Out/Obj/libLinderdaumEngine.a $(USEDLIBS)
+
 
 # End of Makefile

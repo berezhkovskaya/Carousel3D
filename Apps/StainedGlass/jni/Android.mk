@@ -110,9 +110,9 @@ LOCAL_C_INCLUDES := \
 	$(LOCAL_PATH)/../../../Src/Linderdaum/World/AI
 
 LOCAL_C_INCLUDES += \
-	$(LOCAL_PATH)/../../../Src \
-	$(LOCAL_PATH)/../../../Src/Linderdaum \
-	$(LOCAL_PATH)/../../../Src/ExtLibs \
+	$(LOCAL_PATH)/../C:/LinderdaumSDK/Src \
+	$(LOCAL_PATH)/../C:/LinderdaumSDK/Src/Linderdaum \
+	$(LOCAL_PATH)/../C:/LinderdaumSDK/Src/ExtLibs \
 	$(LOCAL_PATH)/../Src \
 	$(LOCAL_PATH)/../Src/com \
 	$(LOCAL_PATH)/../Src/com/linderdaum \

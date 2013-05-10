@@ -1,0 +1,82 @@
+Box2DBody                                  class    
+Box2DJoint                                 class    
+LAABoundingBox          NetAABoundingBox   pod      LNativeConverter::ToNetBBox     LNativeConverter::FromNetBBox     
+LAxisList                                  class    
+LBitmapFormat           System::Int32      scalar   
+LCollisionShape                            class    
+LEulerAngleSystem       System::Int32      scalar   
+LEvent                  System::Int32      scalar   
+LGradientsMode          System::Int32      scalar   
+LInterval                                  class    
+LLogLevel               System::Int32      scalar   
+LMatrix3                NetMtx3            pod      LNativeConverter::ToNetMtx3     LNativeConverter::FromNetMtx3     
+LMatrix4                NetMtx4            pod      LNativeConverter::ToNetMtx4     LNativeConverter::FromNetMtx4     
+LPrimitiveType          System::Int32      scalar   
+LProjectionType         System::Int32      scalar   
+LQuaternion             NetQuat            pod      LNativeConverter::ToNetQuat     LNativeConverter::FromNetQuat     
+LSphere                 NetSphere          pod      LNativeConverter::ToNetSphere   LNativeConverter::FromNetSphere   
+LString                 System::String     pod      LNativeConverter::ToNetString   LNativeConverter::FromNetString   
+LStringBuffer           System::String     pod      LNativeConverter::ToNetStr      LNativeConverter::FromNetStr      
+LTextureType            System::Int32      scalar   
+LTransferFunctionMode   System::Int32      scalar   
+LVector2                NetVec2            pod      LNativeConverter::ToNetVec2     LNativeConverter::FromNetVec2     
+LVector3                NetVec3            pod      LNativeConverter::ToNetVec3     LNativeConverter::FromNetVec3     
+LVector4                NetVec4            pod      LNativeConverter::ToNetVec4     LNativeConverter::FromNetVec4     
+LVolumeRenderMaterial   System::Int32      scalar   
+LVolumeRenderMode       System::Int32      scalar   
+Ldouble                 System::Double     scalar   
+Lfloat                  System::Single     scalar   
+Lint                    System::Int32      scalar   
+Lint64                  System::Int64      scalar   
+Luint                   System::UInt32     scalar   
+Luint64                 System::UInt64     scalar   
+bool                    System::Boolean    scalar   
+clBehaviour                                class    
+clBitmapAxis                               class    
+clBitmapButton                             class    
+clCanvas                                   class    
+clConsole                                  class    
+clFileSystem                               class    
+clGUIManager                               class    
+clGraph                                    class    
+clLinker                                   class    
+clLogger                                   class    
+clRenderingTechnique                       class    
+clResourcesManager                         class    
+clRigidBody                                class    
+clState                                    class    
+clTrajectoryNode                           class    
+clUVSurfaceGenerator                       class    
+clViewport                                 class    
+clVisualCamera                             class    
+clVisualLight                              class    
+clVisualModifier                           class    
+clVisualParticles                          class    
+clVisualRenderable                         class    
+clVisualVolume                             class    
+double                  System::Double     scalar   
+float                   System::Single     scalar   
+iActor                                     class    
+iAudioSubSystem                            class    
+iCameraPositioner                          class    
+iField                                     class    
+iFontProperties                            class    
+iGUIView                                   class    
+iInputDeviceList                           class    
+iMethod                                    class    
+iObject                                    class    
+iPostprocessor                             class    
+iRenderContext                             class    
+iRenderTarget                              class    
+int                     System::Int32      scalar   
+mat3                    NetMtx3            pod      LNativeConverter::ToNetMtx3     LNativeConverter::FromNetMtx3     
+mat4                    NetMtx4            pod      LNativeConverter::ToNetMtx4     LNativeConverter::FromNetMtx4     
+mtx3                    NetMtx3            pod      LNativeConverter::ToNetMtx3     LNativeConverter::FromNetMtx3     
+mtx4                    NetMtx4            pod      LNativeConverter::ToNetMtx4     LNativeConverter::FromNetMtx4     
+quat                    NetQuat            pod      LNativeConverter::ToNetQuat     LNativeConverter::FromNetQuat     
+size_t                  System::UInt64     scalar   
+string                  System::String     pod      LNativeConverter::ToNetString   LNativeConverter::FromNetString   
+vec2                    NetVec2            pod      LNativeConverter::ToNetVec2     LNativeConverter::FromNetVec2     
+vec3                    NetVec3            pod      LNativeConverter::ToNetVec3     LNativeConverter::FromNetVec3     
+vec4                    NetVec4            pod      LNativeConverter::ToNetVec4     LNativeConverter::FromNetVec4     
+void                    System::Void       scalar   

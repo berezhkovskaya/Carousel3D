@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{99031CA9-5734-5F49-A35F-32ADF97AB8E5}</ProjectGuid>
-    <RootNamespace>StainedGlass</RootNamespace>
+    <ProjectGuid>{FC14EDE7-7F3D-5E46-B07A-15DA1C30682D}</ProjectGuid>
+    <RootNamespace>Test_Android</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -67,16 +67,16 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\LinderdaumSDK\Out\StainedGlassDebug32\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\LinderdaumSDK\Out\Test_AndroidDebug32\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\LinderdaumSDK\Out\StainedGlassRelease32\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\LinderdaumSDK\Out\Test_AndroidRelease32\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\LinderdaumSDK\Out\StainedGlassDebug64\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\LinderdaumSDK\Out\Test_AndroidDebug64\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\LinderdaumSDK\Out\StainedGlassRelease64\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\LinderdaumSDK\Out\Test_AndroidRelease64\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -92,19 +92,19 @@
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LocalDebuggerCommand>$(OutDir)/StainedGlass_Win32Debug.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand>$(OutDir)/Test_Android_Win32Debug.exe</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommand>$(OutDir)/StainedGlass_Win64Debug.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand>$(OutDir)/Test_Android_Win64Debug.exe</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LocalDebuggerCommand>$(OutDir)/StainedGlass_Win32Release.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand>$(OutDir)/Test_Android_Win32Release.exe</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LocalDebuggerCommand>$(OutDir)/StainedGlass_Win64Release.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand>$(OutDir)/Test_Android_Win64Release.exe</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -135,10 +135,10 @@
     <Link>
       <AdditionalOptions>/fixed:no %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>LinderdaumEngine.lib;user32.lib;gdi32.lib;Vfw32.lib;ole32.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)/StainedGlass_Win32Debug.exe</OutputFile>
+      <OutputFile>$(OutDir)/Test_Android_Win32Debug.exe</OutputFile>
       <AdditionalLibraryDirectories>C:\LinderdaumSDK\Libs.Win32;C:\LinderdaumSDK\Out\Debug32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(OutDir)StainedGlass.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)Test_Android.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
@@ -165,7 +165,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>LinderdaumEngine.lib;user32.lib;gdi32.lib;Vfw32.lib;ole32.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)/StainedGlass_Win32Release.exe</OutputFile>
+      <OutputFile>$(OutDir)/Test_Android_Win32Release.exe</OutputFile>
       <AdditionalLibraryDirectories>C:\LinderdaumSDK\Libs.Win32;C:\LinderdaumSDK\Out\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
@@ -205,10 +205,10 @@
     <Link>
       <AdditionalOptions>/fixed:no %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>LinderdaumEngine.lib;user32.lib;gdi32.lib;Vfw32.lib;ole32.lib;fmodex64_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)/StainedGlass_Win64Debug.exe</OutputFile>
+      <OutputFile>$(OutDir)/Test_Android_Win64Debug.exe</OutputFile>
       <AdditionalLibraryDirectories>C:\LinderdaumSDK\Libs.Win64;C:\LinderdaumSDK\Out\Debug64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(OutDir)StainedGlass.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)Test_Android.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
@@ -241,7 +241,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>LinderdaumEngine.lib;user32.lib;gdi32.lib;Vfw32.lib;ole32.lib;fmodex64_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)/StainedGlass_Win64Release.exe</OutputFile>
+      <OutputFile>$(OutDir)/Test_Android_Win64Release.exe</OutputFile>
       <AdditionalLibraryDirectories>C:\LinderdaumSDK\Libs.Win64;C:\LinderdaumSDK\Out\Release64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
@@ -250,7 +250,7 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>	<ItemGroup>
-		<ClCompile Include= "Src\StainedGlass.cpp" />
+		<ClCompile Include= "Src\Test_Android.cpp" />
 	</ItemGroup>
 	<ItemGroup>
 	</ItemGroup>

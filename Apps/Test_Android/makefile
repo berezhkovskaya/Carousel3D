@@ -15,21 +15,18 @@ INCLUDE_DIRS = -I . \
 	-I C:/LinderdaumSDK/Src/Linderdaum \
 	-I C:/LinderdaumSDK/Src/ExtLibs \
 	-I Src \
-	-I Src/com \
-	-I Src/com/linderdaum \
-	-I Src/com/linderdaum/engine \
 
 COPTS = $(INCLUDE_DIRS)
 
 
 # Object files list
 OBJS =  \
-	$(OBJDIR)/StainedGlass.o \
+	$(OBJDIR)/Test_Android.o \
 
 # Object files
 
-$(OBJDIR)/StainedGlass.o: Src/StainedGlass.cpp
-	$(CC) $(COPTS) -MD -c Src/StainedGlass.cpp -o $(OBJDIR)/StainedGlass.o $(CFLAGS)
+$(OBJDIR)/Test_Android.o: Src/Test_Android.cpp
+	$(CC) $(COPTS) -MD -c Src/Test_Android.cpp -o $(OBJDIR)/Test_Android.o $(CFLAGS)
 
 
 # User-defined targets
@@ -51,7 +48,7 @@ GAMEA: $(OBJS)
 
 all: $(OBJS) GAMEA
 #$(OBJS)
-	$(CC) $(COPTS) $(CFLAGS) -o StainedGlass.exe Src/StainedGlass.cpp Obj/Game.a C:/LinderdaumSDK/Out/Obj/libLinderdaumEngine.a $(USEDLIBS)
+	$(CC) $(COPTS) $(CFLAGS) -o Test_Android.exe Src/Test_Android.cpp Obj/Game.a C:/LinderdaumSDK/Out/Obj/libLinderdaumEngine.a $(USEDLIBS)
 
 
 # End of Makefile
