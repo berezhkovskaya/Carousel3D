@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Asteroids" default="help">
+
+    <import file="C:/LinderdaumSDK/Apps/Carousel3D/BuildAndroid/CommonMedia.xml"/>
+
+    <property file="local.properties" />
+
+    <property file="ant.properties" />
+
+    <loadproperties srcFile="project.properties" />
+
+    <fail
+            message="sdk.dir is missing. Make sure to generate local.properties using 'android update project' or to inject it through an env var"
+            unless="sdk.dir"
+    />
+
+    <target name="copy-game-data">
+    <!-- Game data -->
+        <delete dir="assets"/>
+        <copy todir="assets/Data">
+            <fileset dir="GameData">
+            </fileset>
+        </copy>
+        <copy todir="assets/Data">
+            <fileset dir="Data">
+            </fileset>
+        </copy>
+    </target>
+
+    <import file="${sdk.dir}/tools/ant/build.xml" />
+</project>
