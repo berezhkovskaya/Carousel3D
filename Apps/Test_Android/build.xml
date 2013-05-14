@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Asteroids" default="help">
+<project name="Test_Android" default="help">
 
-    <import file="C:/LinderdaumSDK/Apps/Carousel3D/BuildAndroid/CommonMedia.xml"/>
+    <import file="../../BuildAndroid/CommonMedia.xml"/>
 
     <property file="local.properties" />
 
