@@ -31,14 +31,13 @@ void Update( LEvent Event, const LEventArgs& Args )
 
 APPLICATION_ENTRY_POINT
 {
-    LString CommandLine;
-
-	EXTRACT_COMMAND_LINE(CommandLine);
+	std::vector<LString> CommandLine;
+    EXTRACT_COMMAND_LINE(CommandLine);
 
     Env = new sEnvironment();
 
     // CommonMedia используется только на PC, на Андроиде она будет хитро упакована в ресурсы
-	Env->DeployDefaultEnvironment( CommandLine, "..\\..\\CommonMedia" );
+	Env->DeployDefaultEnvironment(&CommandLine, "..\\..\\CommonMedia" );
     Env->FileSystem->Mount("GameData");
 
     Projection = Math::Perspective( 45.0f, Env->Viewport->GetAspectRatio(), 0.4f, 2000.0f );

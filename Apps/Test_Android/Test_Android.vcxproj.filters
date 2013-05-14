@@ -1,24 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<Filter Include="C:\LinderdaumSDK\Src">
-			<UniqueIdentifier>{fb0686ca-276c-4d96-8412-202b6a9c801b}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="C:\LinderdaumSDK\Src/Linderdaum">
-			<UniqueIdentifier>{53dd8fc1-0816-4b5e-8301-0a88c34b58b9}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="C:\LinderdaumSDK\Src/ExtLibs">
-			<UniqueIdentifier>{5a2b75d5-9803-42f8-989f-8fafdfc95383}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="Src">
-			<UniqueIdentifier>{32f300ea-3e4c-448a-b51a-543f34dfe3a3}</UniqueIdentifier>
-		</Filter>
-	</ItemGroup>
-	<ItemGroup>
-		<ClCompile Include="Src\Test_Android.cpp">
-			<Filter>Src</Filter>
-		</ClCompile>
-	</ItemGroup>
-	<ItemGroup>
-	</ItemGroup>
+  <ItemGroup>
+    <Filter Include="Src">
+      <UniqueIdentifier>{32f300ea-3e4c-448a-b51a-543f34dfe3a3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\Test_Android.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
 </Project>
