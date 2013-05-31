@@ -28,3 +28,6 @@ Apps/*/assets/
 Apps/*/bin/
 Apps/*/gen/
 Apps/*/obj/
+
+BuildAndroid/bin/
+BuildAndroid/gen/
